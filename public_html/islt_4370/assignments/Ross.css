@@ -19,7 +19,7 @@ something {
   color: FireBrick;
   padding: 12px;
 }
-button {
+.button {
     background-color: GhostWhite;
     border: none;
     color: Tomato;
