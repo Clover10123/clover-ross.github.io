@@ -7,18 +7,25 @@ text-decoration: none;
 body {
 	font-family: Georgia;
     transition: linear;
-	color: #000000;
+	background-color: #000000;
+	background-image: url(Clover10123.github.io/public_html/islt_4370/assignments/images/BackgroundImageFace.png);
+	
 }
 p {
 	color: #aeaeae;
 	text-align: center;
 	
 }
-something {
-	text-align: center;
-  color: FireBrick;
-  padding: 12px;
+
+div {
+	width: 320px;
+	padding: 10px;
+	border: 5px solid #FDB7FF;
+	margin: 0;
+	
+	
 }
+
 .button {
     background-color: GhostWhite;
     border: none;
@@ -43,6 +50,3 @@ input{
 	padding: 12px;
 	}
 	
-	
-
-
