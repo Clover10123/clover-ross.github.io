@@ -1,52 +1,141 @@
 
+text{
+	color: #FFFFFF;
+	text-align: center;
+	width: 100%;
+	align-content: center;
+	margin-top: 10px;
+}
 
 a {
 text-decoration: none;
-	color: violet;
+	color: #7700B4;
 }
+
+b{
+	color: #FDB7FF;
+	font-size: 30px;
+	margin: 0px 0px 10px 0px;
+
+	
+}
+c{
+	color: #000000;
+	font-size: 30px;
+	margin: 0px 0px 10px 0px;
+
+}
+
 body {
 	font-family: Georgia;
-    transition: linear;
-	background-color: #000000;
 	background-image: url("images/BackgroundImageFace.png");
+	background-size: cover;
+background-repeat: no-repeat;
+	margin-top: 0;
+	margin-left: 0;
+	margin-right: 0;
+	margin-bottom: 100px;
+}
+
+
+.blankspace{
+	margin: 10px
+	
 	
 }
+
+
+.main{
+	padding: 5px;
+	margin: 3px;
+	float: left;
+	position: inherit;
+	
+}
+
+
 p {
-	color: #aeaeae;
+	color: #FFFFFF;
 	text-align: center;
+	width: 100%;
+	align-content: center;
+	margin-left: 5px;
+	margin-right: 5px;
+	margin-bottom: 0px;
+	margin-top: 10px;
+	
 	
 }
+
+.sidebar{
+	position: inherit;
+	height: 500px;
+	background-color: #8A48F3;
+	width: 300px;
+	float: right;
+	margin-left: 5px;
+	text-align: center;
+
+	
+	
+	
+	
+	
+	
+}
+
+.box {
+
+	width: 300px;
+	height: 500px;
+	background-color: #6DDDFF;
+	color: #000000;
+	text-align: center;
+	position: inherit;
+	display: block;
+	float: left;
+	
+}
+
+
 
 div {
-	width: 320px;
-	padding: 10px;
-	border: 5px solid #FDB7FF;
-	margin: 0;
+	width: inherit;
+	margin: 0px;
+	align-content: center;
+	position: relative;
+	background-color: #FDB7FF;
+	font-weight: bolder;
 	
+}
+.header{
+	margin: 0px;
+	background-color: #FDB7FF;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	padding: 1rem;
 	
 }
 
+
 .button {
-    background-color: GhostWhite;
-    border: none;
-    color: Tomato;
-    padding: 10px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-	position: relative;
-	margin-top: 0px auto;
-	border-radius: 10;
-	width: 25%
+    background-color: #FDB7FF;
+    position: relative;
+	
+	
 		
 }
-input{
-	background-color: DarkViolet;
-	color: white;
-	font-size: 10px;
-	display: inline-block;
-	border: 2px solid purple;
-	padding: 12px;
-	}
+
+
+.footer {
+	margin: 0px;
+	background-color: #FDB7FF;
+	position:fixed;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	padding: 1rem;
 	
+	
+}
