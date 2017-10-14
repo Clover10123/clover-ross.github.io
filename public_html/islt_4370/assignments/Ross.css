@@ -124,6 +124,7 @@ div {
 .button {
     background-color: #FDB7FF;
     position: relative;
+	border-radius: 25px;
 	
 	
 		
