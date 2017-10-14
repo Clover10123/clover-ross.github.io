@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>CSS3 and Form</title>
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+</head>
+<body>
+    <form name="testForm" action="assignments.html" method="get">
+        <h1>Form Title</h1>
+        <p><label for="name">Simple text field:</label> 
+        <input type="text" id="name" required="required" name="name" value="" /></p>
+        
+        <p><label for="level">Checkbox:</label> 
+        <input type="checkbox" required="required" name="level"  id="level" value="checked" /></p>
+        
+        <p><label for="radio">Radio Button:</label><br />
+        <input type="radio" required="required" name="radio1" value="Choice 1" id="radio" /> Choice 1<br />
+        <input type="radio" required="required" name="radio1" value="Choice 2" /> Choice 2</p>
+        
+        <p><label for="list">List Menu:</label> 
+            <select name="list" id="list">
+                <option value="firstOption">First Option</option>
+                <option value="secondOption">Second Option</option>
+                <option value="thirdOption">Third Option</option>
+                <option value="fourthOption">Fourth Option</option>
+            </select>
+        </p>       
+        
+        <p><button type="submit">Submit</button></p>
+    
+    </form>
+</body>
+</html>
