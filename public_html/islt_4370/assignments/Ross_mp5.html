@@ -9,6 +9,24 @@ $(document).ready(function(){
         $("#ajaxTest").load("ajaxTest.html");
     });
 });
+    
+    $(document).ready(function(){
+    $("button.ajax1").click(function(e){
+        e.preventDefault();
+        $("#ajaxTest").load("test-content1.html");
+    });
+    $("button.ajax2").click(function(e){
+        e.preventDefault();
+        $("#ajaxTest").load("test-content2.html");
+    });
+    $("button.ajax3").click(function(e){
+        e.preventDefault();
+        $("#ajaxTest").load("test-content3.html");
+    });
+});
+    
+    
+    
 </script>
     
  <title>Javascript Assignment</title>
@@ -21,6 +39,15 @@ $(document).ready(function(){
         <h3>Click the button to see if AJAX works!</h3>    
         <button class="ajax">Click To Test</button>
     </div>
-    
+<button class="ajax1">Test1</button>
+<button class="ajax2">Test2</button>
+<button class="ajax3">Test3</button>
+    <h1>Ajax Test Site</h1>
+    <p>Click any of the navigation buttons above to load new content below.</p>
+    <div id="ajaxTest">
+        <h2>Home Page</h2> 
+        <p>This is the text for the home page.</p>
+        
+    </div>
 </body>
 </html>
