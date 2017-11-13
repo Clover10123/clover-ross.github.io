@@ -9,10 +9,10 @@ text{
 
 a {
 text-decoration: none;
-he	color: black;
+he	color: blue;
 }
 a:visited{
-	color:#6DDDFF;
+	color: black;
 	opacity: 0.75;
 }
 b{
