@@ -9,8 +9,8 @@ button{
   background-color:#4d4dff;
   color:#ffffff;
   
-
 }
+
 p{
   color: black;
   
@@ -23,5 +23,11 @@ div{
   min-height:75px;
   line-height:75px;
   text-align:center;
+
+}
+.header {
+  font-size: 200%;
+  text-align:center;
+
 
 }
