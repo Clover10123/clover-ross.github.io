@@ -20,6 +20,12 @@ p{
   color: black;
   
 }
+hr { 
+  background-color: #669999;
+  color:#666699;
+  
+
+}
 div{
   background-color: white;
   width: 700px;
