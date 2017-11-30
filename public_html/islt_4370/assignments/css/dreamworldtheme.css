@@ -7,6 +7,8 @@ nav {
     min-height:75px;
   line-height:75px;
   text-align:center;
+  margin: 0;
+  padding: 0;
 }
 button{
   background-color:#4d4dff;
