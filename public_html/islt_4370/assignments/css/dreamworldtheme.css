@@ -1,1 +1,30 @@
-#
+body {
+  background-color:#99ccff;
+  
+
+
+}
+
+nav {
+  background-color:#70dbdb;
+  
+
+  
+}
+button{
+  background-color:#4d4dff;
+  color:#ffffff;
+  
+
+}
+p{
+  color: black;
+  
+}
+div{
+  background-color: white;
+  width: 700px;
+  border: 5px black;
+  margin: 25px;
+
+}
