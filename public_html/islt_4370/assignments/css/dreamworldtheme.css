@@ -4,6 +4,9 @@ body {
 
 nav {
   background-color:#70dbdb;
+    min-height:75px;
+  line-height:75px;
+  text-align:center;
 }
 button{
   background-color:#4d4dff;
