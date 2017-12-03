@@ -24,7 +24,8 @@ nav {
 button{
   background-color:#4d4dff;
   color:#ffffff;
-  
+  border: 10px black;
+  font-weight:bold;
 }
 
 p{
@@ -36,11 +37,12 @@ hr {
   color:#666699;
   border-width: 5px;
   
+  
 
 }
 div{
   background-color: white;
-  width: 50%
+  width: 50%;
   border: 5px black;
   margin: 25px;
   min-height:75px;
@@ -53,4 +55,15 @@ div{
   text-align:center;
   background-color:#70dbdb;
 
+}
+
+.gamename {
+  background-color: lightblue;
+  width: 50%;
+  border: 10px;
+  min-height:75px;
+  line-height: 75px;
+  text-align:left;
+
+  
 }
