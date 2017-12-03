@@ -60,10 +60,13 @@ div{
 .gamename {
   background-color: lightblue;
   width: 50%;
-  border: 10px;
+  border: 10px black;
   min-height:75px;
   line-height: 75px;
   text-align:left;
+  margin: 5, 5, 0, 5;
+  
+  
 
   
 }
