@@ -23,6 +23,8 @@ nav {
 }
 button{
   background-color:#4d4dff;
+  font-size: 16px;
+  padding: 10px 16px;
   color:#ffffff;
   border: 15px solid black;
   font-weight:bold;
@@ -82,7 +84,7 @@ input[type=text], select, textarea {
 }
 
 input[type=submit] {
-    background-color: #4CAF50;
+    background-color: #4d4dff;
     color: white;
     padding: 12px 20px;
     border: none;
@@ -91,7 +93,7 @@ input[type=submit] {
 }
 
 input[type=submit]:hover {
-    background-color: #45a049;
+    background-color: #70dbdb;
 }
 
 .container {
