@@ -26,8 +26,10 @@ button{
   font-size: 16px;
   padding: 10px 16px;
   color:#ffffff;
-  border: 15px solid black;
+  border: 5px solid black;
   font-weight:bold;
+  border-radius: 4px;
+  
 }
 
 p{
