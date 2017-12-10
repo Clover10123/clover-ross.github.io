@@ -33,7 +33,7 @@ $(document).ready(function(){
 
   $($submit).click(function(){
     if($text.html() == ""){
-      alert("Plesea write a comment!");
+      alert("Please write a comment!");
       $text.focus();
     } else{
       _data = $text.html();
