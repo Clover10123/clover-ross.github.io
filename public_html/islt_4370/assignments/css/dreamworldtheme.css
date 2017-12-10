@@ -15,6 +15,7 @@ body {
     font-size: 200%;
   text-align:center;
   background-color:#70dbdb;
+  position:fixed;
 }
 footer{
   mmargin:0;
