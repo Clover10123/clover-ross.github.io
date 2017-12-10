@@ -21,6 +21,8 @@ footer{
   mmargin:0;
 background-color:#99ccff;
   position: absolute;
+  left:0;
+  right:0;
   bottom: 0;
 }
 nav {
