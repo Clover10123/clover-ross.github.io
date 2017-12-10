@@ -69,7 +69,7 @@ hr {
 div{
   background-color: white;
   width: 80%;
-  border: 5px black;
+  border: 5px solid black;
   margin: 25px;
   min-height:75px;
   line-height:75px;
