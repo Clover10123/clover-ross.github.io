@@ -15,12 +15,11 @@ body {
     font-size: 200%;
   text-align:center;
   background-color:#70dbdb;
-  position:fixed;
+ 
 }
 footer{
   margin:0;
 background-color:#99ccff;
-  position: absolute;
   left:0;
   right:0;
   bottom: 0;
@@ -32,6 +31,7 @@ nav {
   text-align:center;
   margin: 0;
   padding: 0;
+ position:fixed;
 }
 button{
   background-color:#4d4dff;
