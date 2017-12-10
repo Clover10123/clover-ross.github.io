@@ -5,13 +5,19 @@ html {
 
 
 body {
-  background-color:#99ccff;
+  background-color:white;
   margin:0;
   padding:0;
 }
 .header{
   margin:0;
   padding:0;
+    font-size: 200%;
+  text-align:center;
+  background-color:#70dbdb;
+}
+.footer{
+background-color:#99ccff;
 }
 nav {
   background-color:#70dbdb;
@@ -62,12 +68,6 @@ div{
   min-height:75px;
   line-height:75px;
   text-align:center;
-
-}
-.header {
-  font-size: 200%;
-  text-align:center;
-  background-color:#70dbdb;
 
 }
 
