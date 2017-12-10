@@ -93,6 +93,10 @@ div{
 
   
 }
+.gamebox{
+width: 600px;
+  height: 600px;
+}
 
 input[type=text], select, textarea {
     width: 100%;
