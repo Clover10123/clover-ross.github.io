@@ -93,7 +93,6 @@ div{
   height:500px;
   border: 5px solid black;
   margin: 25px auto;
-  min-height:75px;
   max-width: 500px;
   text-align:center;
   right:0;
@@ -119,7 +118,7 @@ div{
   background-color: lightblue;
   max-width:500px;
   max-height:50px;
-  
+  font-size:250%;
   border: 10px solid black;
   min-height:75px;
   text-align:left;
