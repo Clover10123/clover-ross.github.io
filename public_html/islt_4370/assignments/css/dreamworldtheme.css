@@ -67,7 +67,8 @@ hr {
 
 }
 div{
-  background-color: white;
+  background-color: #00cc99;
+  color: black;
   width: 80%;
   border: 5px solid black;
   margin: 25px;
