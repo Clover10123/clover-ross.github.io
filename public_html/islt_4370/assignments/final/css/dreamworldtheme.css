@@ -90,10 +90,10 @@ hr {
 div{
   background-color:#cc99ff;
   color: black;
-  height:500px;
+  min-height: 500px;
   border: 5px solid black;
   margin: 25px auto;
-  max-width: 500px;
+  max-width: 800px;
   text-align:center;
   right:0;
   left:0;
