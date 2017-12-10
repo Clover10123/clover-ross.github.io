@@ -20,6 +20,8 @@ body {
 footer{
   mmargin:0;
 background-color:#99ccff;
+  position: absolute;
+  bottom: 0;
 }
 nav {
   background-color:#70dbdb;
