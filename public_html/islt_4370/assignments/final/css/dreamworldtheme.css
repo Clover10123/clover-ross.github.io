@@ -84,7 +84,7 @@ div{
   color: black;
   height:500px;
   border: 5px solid black;
-  margin: 25px;
+  margin: 25px auto;
   min-height:75px;
   max-width: 500px;
   text-align:center;
