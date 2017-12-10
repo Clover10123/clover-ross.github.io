@@ -16,7 +16,8 @@ body {
   text-align:center;
   background-color:#70dbdb;
 }
-.footer{
+footer{
+  mmargin:0;
 background-color:#99ccff;
 }
 nav {
