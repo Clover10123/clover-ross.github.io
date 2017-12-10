@@ -1,6 +1,8 @@
 html {
   margin:0;
   padding:0;
+  font-family: "Georgia";
+    font-style: normal;
 }
 
 
@@ -65,12 +67,17 @@ background-color:#70dbdb;
   border: 5px solid white;
   font-weight:bold;
   border-radius: 4px;
+  font-style:italic;
 
 }
 
 p{
   color: black;
   
+}
+#emphasis{
+font-weight:bold;
+
 }
 hr { 
   background-color: #669999;
