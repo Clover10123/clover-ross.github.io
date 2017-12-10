@@ -9,6 +9,7 @@ body {
   padding:0;
   margin: 0;
   bottom: 0;
+  text-align:center;
 }
 .header{
   margin:0;
@@ -90,19 +91,12 @@ div{
   text-align:center;
   right:0;
   left:0;
+  position:fixed;
 
 }
-#outPopUp {
-  position: absolute;
-  width: 300px;
-  height: 200px;
-  z-index: 15;
-  top: 50%;
-  left: 50%;
-  margin: -100px 0 0 -150px;
-}
 
-#oldnews{
+
+.oldnews{
   background-color:light gray;
   color:black;
 
