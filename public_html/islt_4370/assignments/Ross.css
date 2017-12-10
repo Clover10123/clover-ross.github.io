@@ -118,6 +118,7 @@ div {
 	right: 0;
 	left: 0;
 	padding: 1rem;
+	position:fixed;
 	
 }
 
@@ -135,7 +136,7 @@ div {
 .footer {
 	margin: 0px;
 	background-color: #FDB7FF;
-	position:fixed;
+	
 	bottom: 0;
 	right: 0;
 	left: 0;
