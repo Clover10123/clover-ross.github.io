@@ -14,6 +14,13 @@ $(document).ready(function(){
   });
 });
 
+$.ajax({
+    url: "https://formspree.io/you@email.com", 
+    method: "POST",
+    data: {message: "hello!"},
+    dataType: "json"
+});
+
 $(document).ready(function(){
   var $text = $("#text"),
       $submit = $("input[type='submit']"),
