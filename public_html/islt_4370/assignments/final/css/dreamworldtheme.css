@@ -131,6 +131,24 @@ div{
 
   
 }
+.creditsbox{
+
+  background-color: lightblue;
+  max-width:500px;
+  max-height:50px;
+  font-size:50%;
+  border: 10px solid black;
+  min-height:75px;
+  text-align:left;
+  margin: 5, 5, 0, 5;
+  top:0;
+  bottom:0;
+  right:0;
+  left:0;
+  
+}
+
+
 .gamebox{
 max-width: 600px;
   max-height: 600px;
