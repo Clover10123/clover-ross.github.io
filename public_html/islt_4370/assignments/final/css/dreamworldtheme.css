@@ -25,6 +25,7 @@ body {
  
 }
 
+
 img{
 box-shadow: 10px 10px 5px grey;
   top: 0;
@@ -74,6 +75,11 @@ background-color:#70dbdb;
 p{
   color: black;
   
+}
+p:hover [id=fun]{
+color: rgba (255,0,0,0.5); /* This gives us a red at 50% opacity */
+
+
 }
 #emphasis{
 font-weight:bold;
