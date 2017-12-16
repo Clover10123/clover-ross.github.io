@@ -96,13 +96,14 @@ div{
   border: 5px solid black;
   margin: 25px auto;
   max-width: 800px;
-  text-align:center;
   right:0;
   left:0;
 
 }
 
-
+#heading{
+text-align:center;
+}
 .oldnews{
   background-color: grey;
   color:black;
