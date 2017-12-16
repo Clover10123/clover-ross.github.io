@@ -94,10 +94,11 @@ div{
   color: black;
   min-height: 500px;
   border: 5px solid black;
-  margin: 25px auto;
+  margin: 50px auto;
   max-width: 800px;
   right:0;
   left:0;
+  line-height: 150%;
 
 }
 
