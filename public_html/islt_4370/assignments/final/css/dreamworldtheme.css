@@ -126,7 +126,6 @@ text-align:center;
   border: 10px solid black;
   min-height:75px;
   text-align:center;
-  margin: 25px;
   top:0;
   bottom:0;
   right:0;
@@ -159,6 +158,8 @@ max-width: 600px;
   bottom: 0;
   right: 0;
   left:0;
+  text-align: center;
+  margin: 50px;
 }
 
 input[type=text], select, textarea {
