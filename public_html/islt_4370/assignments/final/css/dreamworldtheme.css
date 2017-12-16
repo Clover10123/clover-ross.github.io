@@ -105,13 +105,19 @@ div{
   color: black;
   min-height: 500px;
   border: 5px solid black;
-  margin: 50px ;
   max-width: 800px;
-  right:0;
-  left:0;
   line-height: 150%;
+   margin: 0 auto;
+   width: 100px; 
 
 }
+
+.center-div
+{
+     margin: 0 auto;
+     width: 100px; 
+}
+
 
 .heading{
 text-align:center;
@@ -135,10 +141,8 @@ text-align:center;
   font-size:250%;
   border: 10px solid black;
   min-height:75px;
-  top:0;
-  bottom:0;
-  right:0;
-  left:0;
+     margin: 0 auto;
+     width: 100px; 
    
 }
 
@@ -165,7 +169,8 @@ max-width: 600px;
   bottom: 0;
   right: 0;
   left:0;
-  margin: 50px;
+   margin: 0 auto;
+   width: 100px; 
 }
 
 input[type=text], select, textarea {
