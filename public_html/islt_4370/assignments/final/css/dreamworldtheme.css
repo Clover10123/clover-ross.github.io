@@ -107,7 +107,7 @@ div{
   border: 5px solid black;
   max-width: 800px;
   line-height: 150%;
-   margin: 0 auto;
+   margin: 5 auto;
    min-width: 500px; 
 
 }
