@@ -136,8 +136,7 @@ text-align:center;
 
 .gamename {
   background-color: lightblue;
-  max-width:600px;
-  max-height:50px;
+  max-width:590px;
   font-size:250%;
   border: 10px solid black;
   min-height:75px;
@@ -161,8 +160,8 @@ text-align:center;
 }
 
 .gamebox{
-max-width: 600px;
-  max-height: 600px;
+max-width: 590px;
+  max-height: 590px;
   top: 0;
   bottom: 0;
   right: 0;
