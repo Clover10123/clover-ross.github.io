@@ -34,7 +34,6 @@ text-align:center;
 
 
 img{
-box-shadow: 10px 10px 5px grey;
   top: 0;
   right: 0;
   bottom:0;
@@ -160,6 +159,7 @@ text-align:center;
 }
 
 .gamebox{
+  box-shadow: 10px 10px 5px grey;
 max-width: 590px;
   max-height: 590px;
   top: 0;
