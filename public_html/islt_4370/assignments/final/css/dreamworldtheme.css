@@ -107,7 +107,7 @@ div{
   border: 5px solid black;
   max-width: 800px;
   line-height: 150%;
-   margin: 5 auto;
+   margin: 0 auto;
    min-width: 500px; 
 
 }
@@ -136,7 +136,7 @@ text-align:center;
 
 .gamename {
   background-color: lightblue;
-  max-width:500px;
+  max-width:600px;
   max-height:50px;
   font-size:250%;
   border: 10px solid black;
@@ -149,16 +149,14 @@ text-align:center;
 #creditsbox{
 
   background-color: lightblue;
-  max-width:500px;
+  max-width:600px;
   max-height:50px;
   font-size:50%;
   border: 10px solid black;
   min-height:75px;
   text-align:left;
-  top:0;
-  bottom:0;
-  right:0;
-  left:0;
+  margin: 0 auto;
+  min-width: 500px; 
   
 }
 
