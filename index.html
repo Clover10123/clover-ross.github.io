@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html xml:lang="en" lang ="en"> 
+    <head>
+        <link rel="stylesheet" href="ethic-calc.css" type="text/css"><style></style>
+        <script src="ethic-calc.js"> </script>
+           <title>Ethical Tester</title>
+   
+
+    </head>
+    <body>
+
+        <h1>Ethics Calc Tester</h1>
+        <h2>Click the buttons below.</h2>
+        <button style="display:inline-block" onclick="StartCalc()"id="startbutton">Start</button><button onclick="ResetCalc()" id="resetbutton">Reset</button><br>
+        <div style="display:none" id="Game">
+              
+               <div style="display:none" class="choice" id="charitychoice"> Donate?<br>
+                <button onclick="firstchoice();" id="charitytrue">Yes</button> <button onclick="firstchoice();">No</button></div>
+
+
+                <div style="display:none"class="choice" id="CaraAlexEncounter">Steal or Pay?<br>
+                    <button onclick="stealpaychoice(); stealFlag()"id="Stealchoice">Steal</button> <button onclick="stealpaychoice(); payFlag();"id="Paychoice">Pay</button><br>
+                    <p id="HowMuchFood" style="display:none">Large or Enough?</p><br>
+                    <button onclick="sharechoice()"style="display:none"class="HowMuchFood" id="Large">Large</button> <button onclick="sharechoice()" style="display:none" class="HowMuchFood" id="Enough">Enough</button><br>
+                    <p style="display:none"id="sharedecision">Share?</p><br>
+                    <button style="display:none"onclick="stealquestioning(); payquestioning()" id="Share">Yes</button> <button style="display:none"onclick="stealquestioning(); payquestioning()"id="NoShare">No</button><br>
+                    <p style="display:none"id="stealquestion">Why Steal? <br>
+                    1. No harm was done<br>
+                    2. Had to protect kids<br>
+                    3. No reason</p>
+                    <button onclick="toAct2()"style="display:none" id="steal1">1</button>
+                    <button onclick="toAct2()"style="display:none" id="steal2">2</button>
+                    <button onclick="toAct2()"style="display:none" id="steal3">3</button><br>
+                    <p style="display:none"id="payquestion">Why Pay?<br>
+                    1. Stealing harms<br>
+                    2. Stealing is wrong<br>
+                    3. Good person doesn't steal<br>
+                    4. Stealing is mean<br></p><br>
+                    <button onclick="toAct2()" style="display:none" id="pay1">1</button>
+                    <button onclick="toAct2()"style="display:none" id="pay2">2</button>
+                    <button onclick="toAct2()"style="display:none" id="pay3">3</button>
+                    <button onclick="toAct2()"style="display:none" id="pay4">4</button>
+
+
+                </div>
+               
+                <div style="display:none"class="choice" id="AbeEncounter">
+                    Help or Ignore Abe?<br>
+                    <button onclick="goodSamaritanPass(); goodSamaritanTest()" id="helpabe">Help</button> <button onclick="goodSamaritanTest()" id="ignoreabe">Ignore</button><br>
+                    <p style="display:none"id="aberescued">Stop Abe?<br>
+                        <button onclick="confirmReligion()"id="continueabe">Continue</button> <button onclick="toMemU()"id="stopabe">Stop</button><br>
+                        <span style="display:none" id="religiousness">Religion?<br>
+                            <button onclick="religionCheck(); toMemU()"id="religion">Religion</button> <button onclick="toMemU()">Other</button>
+                        </span>
+                    </p>
+
+                </div>
+
+                <div style="display:none"class="choice" id="MedSteal">Steal Meds?<br>
+                    <button onclick="toStewartChoice()" id="StealMeds">Yes</button> <button onclick="toStewartChoice()" id="NoStealMeds">No</button>
+                            <!-- Scene 7 proceeds below-->
+
+                </div>
+                <div style="display:none" class="choice" id="Stewart">Agree with Stewart?<br>
+                <button onclick="scene72a()"id="a72">Agree</button> <button onclick="scene73a()" id="a73">Disagree</button>
+
+                    <div style="display:none" class="endgamechoice" id="a712"><br>
+                        Abe contemplates.<br>
+                        <button onclick="toTrolley72a()"id="affirm72a">Affirm</button> <button onclick="neutral72a()" id="Neutral">Neutral</button> <button onclick="toTrolley72a()" id="Deny">Deny</button><br>
+                        <p style="display:none"id="abepress72a">Take a stance.<br>
+                        <button onclick="toTrolley72a()" id="abeagree">Agree</button> <button onclick="toTrolley72a()" id="disagree">Disagree</button></p><br>
+                        7.12a
+                
+                
+                    </div>
+                    <div style="display:none" class="endgamechoice" id="a713"><br>
+                        Abe judges.<br>
+                        <button onclick="encouraged()"id="encourage">Encourage</button> <button onclick="discouraged()" id="discourage">Discourage</button><br>
+                        <p style="display:none"id="encouraged"> Abe praises you.<br> <button onclick="toTrolley73a()"id="firm">Confirm</button><button onclick="toTrolley73a()">Soften</button><br></p>
+                        <p style="display:none"id="discouraged">Abe insists.<br> <button onclick="toTrolley73a()" id="Reject">Reject</button><button onclick="toTrolley73a()" id="Accept">Accept</button><button onclick="toTrolley73a()" id="diffuse">Diffuse</button><br></p>
+                7.13a
+                    </div>
+                
+                </div> 
+                <div style="display:none" style="display:none" class="choice" id="StewartSansA">
+                    Agree with Stewart?<br>
+                    <button onclick="toTrolley72x()"id="x72">Agree</button> <button onclick="toTrolley73x()" id="x73">Disagree</button>
+                    
+                        
+                </div> 
+                            <!-- Trolley Problem Below -->
+
+                <div style="display:none"  class="choice" id="trolley72a">
+                    Push Emma?<br>
+                    <button onclick="pushQuestionPink()"id="Push812ap">Push</button> <button onclick="noPushQuestionPink()" id="No812ad">Don't</button> <button onclick="findAnotherWayPink()" style="display:inline-block" id="evadepink">Evade</button>
+                    <br>
+                    <p style="display:none" id="why812ap">Why push?<br>
+                    1. For better outcome<br>
+                    2. Do the right thing<br>
+                    3. Save innocent lives<br>
+                    4. Good person would act<br>
+                    <button id="pink1p">1</button> <button id="pink2p">2</button> <button id="pink3p">3</button> <button id="pink4p">4</button><br></p>
+                    <p style="display:none" id="why812ad">Why no push?<br>
+                    1. Emma isn't a tool<br>
+                    2. Do the right thing<br>
+                    3. Would you have pushed her?<br>
+                    4. Good people don't murder<br>
+                    <button id="pink1d">1</button><button id="pink2d">2</button><button id="pink3d">3</button><button id="pink4d">4</button></p>
+
+
+                </div>
+                <div style="display:none"class="choice" id="trolley73a">
+                    Push Emma? <br>
+                    <button onclick="pushQuestionOrange()"id="Push813ap">Push</button><button onclick="noPushQuestionOrange()" id="No813ad">Don't</button> <button onclick="findAnotherWayOrange()" style="display:inline-block" id="evadeorange">Evade</button>
+                    <br>
+                   <p style="display:none" id="why813ap"> Why push?<br>
+                    1. For better outcome<br>
+                    2. Do the right thing<br>
+                    3. Save innocent lives<br>
+                    4. Good person would act<br>
+                    <button id="orange1p">1</button> <button id="orange2p">2</button> <button id="orange3p">3</button id="orange4p"> <button>4</button><br></p>
+                    <p style="display:none" id="why813ad">Why no push?<br>
+                    1. Emma isn't a tool<br>
+                    2. Do the right thing<br>
+                    3. Would you have pushed her?<br>
+                    4. Good people don't murder<br>
+                    <button id="orange1d">1</button><button id="orange2d">2</button><button id="orange3d">3</button><button id="orange4d">4</button></p>
+                </div>
+
+                <div style="display:none" class="choice" id="trolley72x">
+                    Push Emma?<br>
+                    <button onclick="pushQuestionPurple()"id="Push812p">Push</button> <button onclick="noPushQuestionPurple()" id="No812d">Don't</button> <button onclick="findAnotherWayPurple()"style="display:inline-block" id="evadepurple">Evade</button>
+                    <br>
+                    <p style="display:none" id="why812p">Why push?<br>
+                    1. For better outcome<br>
+                    2. Do the right thing<br>
+                    3. Save innocent lives<br>
+                    4. Good person would act<br>
+                    <button id="purple1p">1</button> <button id="purple2p">2</button> <button id="purple3p">3</button> <button id="purple4p">4</button><br></p>
+                    <p style="display:none"id="why812d">Why no push?<br>
+                    1. Emma isn't a tool<br>
+                    2. Do the right thing<br>
+                    3. Would you have pushed her?<br>
+                    4. Good people don't murder<br>
+                    <button id="purple1d">1</button><button id="purple2d">2</button><button id="purple3d">3</button><button id="purple4d">4</button></p>
+                </div>
+                <div style="display:none" class="choice" id="trolley73x">
+                    Push Emma? <br>
+                    <button onclick="pushQuestionCyan()" id="Push813p">Push</button> <button onclick="noPushQuestionCyan()" id="No813ad">Don't</button> <button onclick="findAnotherWayCyan()" style="display:inline-block" id="evadecyan">Evade</button>
+                    <br>
+                    <p style="display:none"id="why813p">Why push?<br>
+                    1. For better outcome<br>
+                    2. Do the right thing<br>
+                    3. Save innocent lives<br>
+                    4. Good person would act<br>
+                    <button id="cyan1p">1</button> <button id="cyan2p">2</button> <button id="cyan3p">3</button> <button id="cyan4p">4</button><br></p>
+                    <p style="display:none"id="why813d">Why no push?<br>
+                    1. Emma isn't a tool<br>
+                    2. Do the right thing<br>
+                    3. Would you have pushed her?<br>
+                    4. Good people don't murder<br>
+                    <button id="cyan1d">1</button><button id="cyan2d">2</button><button id="cyan3d">3</button><button id="cyan4d">4</button></p>
+                </div>
+
+                <div class="Summary">
+                    <p>Results Below.</p>
+                    <div class="endgamechoice">
+                        <p style="display:none" id="resultdisplay">No calculation.</p>
+                    </div>
+                </div>
+
+
+        </div>
+      
+
+
+       
+    </body>
+
+  
+</html>
