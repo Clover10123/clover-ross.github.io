@@ -4,8 +4,47 @@ var abeSurvived = false;
 var hasReligion = false;
 var emmaDead = false;
 var calcResult = 00;
+var totalDCT = 00;
+var totalVIRT = 00;
+var totalKANT = 00;
+var totalCARE = 00;
+var totalUTIL = 00;
+var totalPOINTS = totalCARE+totalDCT+totalKANT+totalVIRT+totalUTIL;
+var percentDCT = totalDCT / totalPOINTS;
+var percentVIRT = totalVIRT / totalPOINTS;
+var percentKANT = totalKANT / totalPOINTS;
+var percentCARE = totalCARE / totalPOINTS;
+var percentUTIL = totalUTIL / totalPOINTS;
 
+function addDCT(number)
+{
+   var x = number + totalDCT;
+   totalDCT = x;
+}
 
+function addVIRT(number)
+{
+    var x = number + totalVIRT;
+    totalVIRT = x;
+}
+
+function addKANT(number)
+{
+    var x = number + totalKANT;
+    totalKANT = x;
+}
+
+function addCARE(number)
+{
+    var x = number + totalCARE;
+    totalCARE = x;
+}
+
+function addUTIL(number)
+{
+    var x = number + totalUTIL;
+    totalUTIL = x;
+}
 
 function StartCalc() {
 var e = document.getElementById("Game");
@@ -83,7 +122,9 @@ function ResetCalc()
     var d1 = document.getElementById("why812d")
     var d2 = document.getElementById("Push813p")
     var d3 = document.getElementById("why813d")
-    var d4 = document.getElementById("resultdisplay")
+    var d4 = document.getElementById("statistics")
+    var d5 = document.getElementById("religiouscomment")
+    
 
 
     foodPay = false;
@@ -92,6 +133,11 @@ function ResetCalc()
     hasReligion = false;
     emmaDead = false;
     calcResult = 00;
+    totalDCT = 00;
+    totalVIRT = 00;
+    totalKANT = 00;
+    totalCARE = 00;
+    totalUTIL = 00;
 
     if (a.style.display === "none")
     {
@@ -152,6 +198,13 @@ function ResetCalc()
         d2.style.display = "inline-block"
         d3.style.display = "none"
         d4.style.display = "none"
+        d5.style.display = "none"
+        document.getElementById("dctvalue").innerText = "x";
+        document.getElementById("virtvalue").innerText = "x";
+        document.getElementById("carevalue").innerText = "x";
+        document.getElementById("kantvalue").innerText = "x";
+        document.getElementById("utilvalue").innerText = "x";
+        document.getElementById("judgmentdisplay").innerText = "inconsistency.";
      
     }
     else 
@@ -704,17 +757,50 @@ function noPushQuestionCyan()
 
 function displayResult()
 {
-   
-    document.getElementById("resultdisplay").innerText = calcResult;
-    var a = document.getElementById("resultdisplay")
-    if(a.style.display === "none")
+   var a = document.getElementById("statistics");
+   a.style.display = "inline-block";
+    document.getElementById("dctvalue").innerText = percentDCT;
+    document.getElementById("virtvalue").innerText = percentVIRT;
+    document.getElementById("carevalue").innerText = percentCARE;
+    document.getElementById("kantvalue").innerText = percentKANT;
+    document.getElementById("utilvalue").innerText = percentUTIL;
+
+    if (totalDCT >= 20 && totalDCT > totalCARE && totalDCT > totalKANT && totalDCT > totalUTIL && totalDCT > totalVIRT)
     {
-        a.style.display = "inline-block"
+        document.getElementById("judgmentdisplay").innerText = "divine command theory.";
+
+    }
+    else if (totalVIRT >= 20 && totalVIRT > totalCARE && totalVIRT > totalKANT && totalVIRT > totalDCT && totalVIRT > totalUTIL)
+    {
+        document.getElementById("judgmentdisplay").innerText = "virtue ethics.";
+
+    }
+    else if (totalCARE >= 20 && totalCARE > totalDCT && totalCARE > totalKANT && totalCARE > totalUTIL && totalCARE > totalVIRT)
+    {
+        document.getElementById("judgmentdisplay").innerText = "care ethics.";
+
+    }
+    else if (totalKANT >= 20 && totalKANT > totalCARE && totalKANT > totalDCT && totalKANT > totalUTIL && totalKANT > totalVIRT)
+    {
+        document.getElementById("judgmentdisplay").innerText = "kantian ethics.";
+    }
+    else if (totalUTIL >= 20 && totalUTIL > totalDCT && totalUTIL > totalCARE && totalUTIL > totalKANT && totalUTIL > totalVIRT)
+    {
+        document.getElementById("judgmentdisplay").innerText = "utilitarianism."
     }
     else
+    {}
+
+    if (hasReligion = true && totalDCT < 20)
     {
-        alert("Error. Please click reset.")
+        var a = document.getElementById("religiouscomment")
+        if (a.style.display === "none")
+        {
+            a.style.display = "inline=block"
+        }
+        else {}
     }
-    
+    else {}
 
 }
+

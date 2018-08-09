@@ -15,7 +15,7 @@
         <div style="display:none" id="Game">
               
                <div style="display:none" class="choice" id="charitychoice"> Donate?<br>
-                <button onclick="firstchoice();" id="charitytrue">Yes</button> <button onclick="firstchoice();">No</button></div>
+                <button onclick="firstchoice(); addDCT(1);" id="charitytrue">Yes</button> <button onclick="firstchoice();">No</button></div>
 
 
                 <div style="display:none"class="choice" id="CaraAlexEncounter">Steal or Pay?<br>
@@ -166,6 +166,17 @@
                     <p>Results Below.</p>
                     <div class="endgamechoice">
                         <p style="display:none" id="resultdisplay">No calculation.</p>
+                        <p style="display:none" id="statistics">Your actions were:<br>
+                        <span id="dctvalue">x</span>% Divine Command Theory<br>
+                        <span id="virtvalue">x</span>% Virtue Ethics<br>
+                        <span id="carevalue">x</span>% Care Ethics<br>
+                        <span id="kantvalue">x</span>% Kantian Ethics<br>
+                        <span id="utilvalue">x</span>% Utilitarianism<br>
+                            Through your actions, you displayed 
+                        <span id="judgmentdisplay">inconsistency.</span><br>
+                        <span id="religiouscomment" style="display:none">Despite claiming religiousness, your religion played little role in your decisions.</span>
+                        
+                        </p>
                     </div>
                 </div>
 
