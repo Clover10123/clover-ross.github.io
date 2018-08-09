@@ -34,6 +34,23 @@ function totalFlavor()
     var percentChocolate = Math.ceil((numChocolate / x) * 100);
     var percentLime = Math.ceil((numLime / x) * 100);
     console.log(percentVanilla + " " + percentChocolate + " " + percentLime)
+    document.getElementById("chocpercent").innerText = percentChocolate;
+    document.getElementById("limepercent").innerText = percentLime;
+    document.getElementById("vanipercent").innerText = percentVanilla;
+
+    if (numVanilla > numLime && numVanilla > numChocolate)
+    {
+        document.getElementById("summary").innerText = "vanilla."
+    }
+    else if (numChocolate > numLime && numChocolate > numVanilla)
+    {
+        document.getElementById("summary").innerText = "chocolate."
+    }
+    else if (numLime > numVanilla && numLime > numChocolate)
+    {
+        document.getElementById("summary").innerText = "lime."
+    }
+    else{}
 }
 
 function reset()
@@ -41,5 +58,11 @@ function reset()
     numChocolate = 0;
     numVanilla = 0;
     numLime = 0;
+    document.getElementById("chocpercent").innerText = "x";
+    document.getElementById("limepercent").innerText = "x";
+    document.getElementById("vanipercent").innerText = "x";
+    document.getElementById("summary").innerText = "...";
 }
+
+
 
