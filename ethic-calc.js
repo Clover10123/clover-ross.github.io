@@ -83,6 +83,7 @@ function ResetCalc()
     var d1 = document.getElementById("why812d")
     var d2 = document.getElementById("Push813p")
     var d3 = document.getElementById("why813d")
+    var d4 = document.getElementById("resultdisplay")
 
 
     foodPay = false;
@@ -150,6 +151,7 @@ function ResetCalc()
         d1.style.display = "none"
         d2.style.display = "inline-block"
         d3.style.display = "none"
+        d4.style.display = "none"
      
     }
     else 
@@ -702,6 +704,17 @@ function noPushQuestionCyan()
 
 function displayResult()
 {
+   
+    document.getElementById("resultdisplay").innerText = calcResult;
     var a = document.getElementById("resultdisplay")
+    if(a.style.display === "none")
+    {
+        a.style.display = "inline-block"
+    }
+    else
+    {
+        alert("Error. Please click reset.")
+    }
     
+
 }
