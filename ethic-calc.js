@@ -9,12 +9,7 @@ var totalVIRT = 00;
 var totalKANT = 00;
 var totalCARE = 00;
 var totalUTIL = 00;
-var totalPOINTS = totalCARE+totalDCT+totalKANT+totalVIRT+totalUTIL;
-var percentDCT = totalDCT / totalPOINTS;
-var percentVIRT = totalVIRT / totalPOINTS;
-var percentKANT = totalKANT / totalPOINTS;
-var percentCARE = totalCARE / totalPOINTS;
-var percentUTIL = totalUTIL / totalPOINTS;
+
 
 function addDCT(number)
 {
@@ -759,6 +754,14 @@ function displayResult()
 {
    var a = document.getElementById("statistics");
    a.style.display = "inline-block";
+    var totalPOINTS = totalCARE+totalDCT+totalKANT+totalVIRT+totalUTIL;
+    console.log(totalPOINTS);
+    var percentDCT = Math.ceil((totalDCT / totalPOINTS)*100);
+    var percentVIRT = Math.ceil((totalVIRT / totalPOINTS)*100);
+    var percentKANT = Math.ceil((totalKANT / totalPOINTS)*100);
+    var percentCARE = Math.ceil((totalCARE / totalPOINTS)*100);
+    var percentUTIL = Math.ceil((totalUTIL / totalPOINTS)*100);
+    console.log(percentDCT + " " + percentCARE + " " + percentKANT + " " + percentVIRT + " " + percentUTIL);
     document.getElementById("dctvalue").innerText = percentDCT;
     document.getElementById("virtvalue").innerText = percentVIRT;
     document.getElementById("carevalue").innerText = percentCARE;
