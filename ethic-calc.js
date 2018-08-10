@@ -767,6 +767,11 @@ function displayResult()
     document.getElementById("carevalue").innerText = percentCARE;
     document.getElementById("kantvalue").innerText = percentKANT;
     document.getElementById("utilvalue").innerText = percentUTIL;
+    console.log(totalVIRT + " virtue");
+    console.log(totalCARE + " care");
+    console.log(totalDCT +" DCT");
+    console.log(totalKANT + " kant");
+    console.log(totalUTIL + " util");
 
     if (totalDCT >= 20 && totalDCT > totalCARE && totalDCT > totalKANT && totalDCT > totalUTIL && totalDCT > totalVIRT)
     {
