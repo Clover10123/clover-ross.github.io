@@ -804,7 +804,7 @@ function displayResult()
         var a = document.getElementById("religiouscomment")
         if (a.style.display === "none")
         {
-            a.style.display = "inline=block"
+            a.style.display = "inline-block"
         }
         else {}
     }
