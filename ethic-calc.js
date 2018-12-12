@@ -799,7 +799,7 @@ function displayResult()
     else
     {}
 
-    if (hasReligion = true && totalDCT < 20)
+    if (hasReligion === true && totalDCT < 20)
     {
         var a = document.getElementById("religiouscomment")
         if (a.style.display === "none")
