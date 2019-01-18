@@ -15,30 +15,35 @@ function addDCT(number)
 {
    var x = number + totalDCT;
    totalDCT = x;
+   console.log(totalDCT);
 }
 
 function addVIRT(number)
 {
     var x = number + totalVIRT;
     totalVIRT = x;
+   console.log(totalVIRT);
 }
 
 function addKANT(number)
 {
     var x = number + totalKANT;
     totalKANT = x;
+   console.log(totalKANT);
 }
 
 function addCARE(number)
 {
     var x = number + totalCARE;
     totalCARE = x;
+   console.log(totalCARE);
 }
 
 function addUTIL(number)
 {
     var x = number + totalUTIL;
     totalUTIL = x;
+   console.log(totalUTIL);
 }
 
 function StartCalc() {
@@ -811,4 +816,5 @@ function displayResult()
     else {}
 
 }
+console.log(totalKANT, totalVIRT, totalDCT, totalUTIL, totalCARE)
 
