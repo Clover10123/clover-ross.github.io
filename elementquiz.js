@@ -40,8 +40,7 @@ var winners = [];
 var finalResult = " "
 //var keys = ["sun","moon","sky","water","stone","fire","light","dark","lightning","mind","life","ice"]
 //var values = [sun, moon, sky, water, stone, fire, light, dark, lightning, mind, life, ice]
-var keys = Object.keys(elements)
-var values = Object.values(elements)
+
 elements ={}
 elements.sun = 00
 elements.moon = 00;
@@ -55,6 +54,8 @@ elements.lightning = 00;
 elements.mind = 00;
 elements.life = 00;
 elements.ice = 00;
+var keys = Object.keys(elements)
+var values = Object.values(elements)
 
 function resetGame() {
     /*
