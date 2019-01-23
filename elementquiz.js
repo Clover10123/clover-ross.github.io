@@ -20,6 +20,7 @@ var introPrompt = document.getElementById("introPrompt")
 var quitButton = document.getElementById("quitbutton")
 var firstQuestion = document.getElementById("firstQuestion")
 var question1 = " ";
+/*
 var sun = 00;
 var moon = 00;
 var sky = 00;
@@ -32,17 +33,29 @@ var lightning = 00;
 var mind = 00;
 var life = 00;
 var ice = 00;
-
+*/
 
 var valuesAreTied = false;
 var winners = [];
 var finalResult = " "
 var keys = ["sun","moon","sky","water","stone","fire","light","dark","lightning","mind","life","ice"]
 var values = [sun, moon, sky, water, stone, fire, light, dark, lightning, mind, life, ice]
-
-
+var elements ={}
+elements.sun = 00
+elements.moon = 00;
+elements.sky = 00;
+elements.water = 00;
+elements.stone = 00;
+elements.fire = 00;
+elements.light = 00;
+elements.dark = 00;
+elements.lightning = 00;
+elements.mind = 00;
+elements.life = 00;
+elements.ice = 00;
 
 function resetGame() {
+    /*
     sun = 00;
     moon = 00;
     sky = 00;
@@ -55,6 +68,19 @@ function resetGame() {
     mind = 00;
     life = 00;
     ice = 00;
+    */
+    elements.sun = 00;
+    elements.moon = 00;
+    elements.sky = 00;
+    elements.water = 00;
+    elements.stone = 00;
+    elements.fire = 00;
+    elements.light = 00;
+    elements.dark = 00;
+    elements.lightning = 00;
+    elements.mind = 00;
+    elements.life = 00;
+    elements.ice = 00;
     intro1.style.display = "none"
     intro2.style.display = "none"
     intro3.style.display = "none"
@@ -142,6 +168,7 @@ function continue2() {
     firstQuestion.style.display = "inline-block"
     
 }
+/*
 function addLightning(number) {
     var x = number + lightning;
     console.log(number)
@@ -150,13 +177,15 @@ function addLightning(number) {
     return lightning;
     
 }
+*/
 
 
 function firstQuestionResponse(x) {
     if (x == 1) {
         question1 = "1"
         alert("You chose power.")
-        console.log(lightning)
+        //console.log(lightning)
+        elements.lightning+=1;
         elements.fire += 1;
         elements.dark += 1;
     }
