@@ -1,0 +1,51 @@
+﻿
+<!DOCTYPE html>
+<html xml:lang="en" lang="en">
+<head>
+<link rel="stylesheet" href="jstester.css" type="text/css"><style></style>
+<script src="elementquiz.js"></script>
+<title>Element Quiz</title>
+</head>
+<body>
+  <nav>
+    <p class="header">Clover's Game Portfolio</p>
+    <a href="http://clover10123.github.io/index.html"><button>Home</button></a>|<a href="http://clover10123.github.io/portfoliomain.html"><button>Portfolio</button></a>
+    </nav>
+    <hr />
+<h1>Welcome, wandering soul.</h1>
+<div>
+    <button onclick="openIntroduction()"style="display:inline-block" class="vanilla" id="starter"> Click to begin. </button>
+    <br>
+    <p style="display:none" id="intro1"> Welcome to my little game. Here, I will tell you all about the magic of my universe.</p>
+    <br />
+    <button style="display:none" class="chocolate" onclick="continue1()" id="continue1">Continue</button>
+    <p style="display:none" id="intro2"> In this universe, there are 12 elements. </p>
+    <p style="display:none" id="intro3"> These twelve elements make up the physical structure of all things.</p>
+    <p style="display:none" id="intro4"> Intelligent creatures like yourself harness the power of these elements each day.</p>
+    <p style="display:none" id="intro5"> For instance... electricity powers your technology. You consume water for life.</p>
+    <p style="display:none" id="intro6"> A particularly gifted few can control these elements at will.</p>
+    <p style="display:none" id="intro7"> Some might even consider this control... magical.</p>
+    <p style="display:none" id="intro8"> Some may call it "technological prowess."</p>
+    <p style="display:none" id="intro9"> Give it whatever name satisfies you.</p>
+    <p style="display:none" id="intro10"> Regardless of the name, each element is like a beast of its own kind.</p>
+    <p style="display:none" id="intro11"> Each element requires a mastery of its own.</p>
+    <p style="display:none" id="intro12"> This magical assessment will read into your soul... and determine which element best suits you.</p>
+    <p style="display:none" id="intro13"> Are you prepared for this assessment?</p>
+    <p style="display:none" id="introPrompt"><button onclick="continue2()" id="continue2" class="lime">Yes</button><button onclick="resetGame()" id="exit2" class="vanilla">No</button></p>
+    <p style="display:none" id="quitbutton"><button onclick="resetGame()">Exit Game</button></p>
+
+</div>
+<div style="display:none"class="smallBox" id="firstQuestion">
+    <p>Among the following choices, identify the most important quality a leader should possess.</p>
+    <button onclick="addLightning(1);">Power</button> <button onclick="firstQuestionResponse(2)">Intelligence</button>
+    <button onclick="firstQuestionResponse(3)">Empathy</button> <button onclick="firstQuestionResponse(4)">Integrity</button>
+</div>
+    <button onclick="calcWinners();">Calc</button>
+
+
+
+
+<footer><script src="elementquiz.js"></script></footer>
+</body>
+
+</html>
