@@ -54,8 +54,7 @@ elements.lightning = 00;
 elements.mind = 00;
 elements.life = 00;
 elements.ice = 00;
-var keys = Object.keys(elements)
-var values = Object.values(elements)
+
 
 function resetGame() {
     /*
@@ -220,6 +219,8 @@ function firstQuestionResponse(x) {
 }
 
 function calcWinners() {
+    var keys = Object.keys(elements)
+    var values = Object.values(elements)
     var LARGEST = Math.max(...values)
     console.log(LARGEST)
     for (var i = 0; i < keys.length; i++) {
