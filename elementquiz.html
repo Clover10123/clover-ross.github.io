@@ -40,9 +40,22 @@
     <button onclick="firstQuestionResponse(1);">Power</button> <button onclick="firstQuestionResponse(2)">Intelligence</button>
     <button onclick="firstQuestionResponse(3)">Empathy</button> <button onclick="firstQuestionResponse(4)">Integrity</button>
 </div>
-    <button onclick="calcWinners();">Calc</button>
+    
+<div style="display:none"class="smallBox"id="secondQuestion">
+    <p>Among the following choices, identify the most prominent quality in yourself.</p>
+    <button onclick="secondQuestionResponse(1)">Loyal</button> <button onclick="secondQuestionResponse(2)">Exciting</button>
+    <button onclick="secondQuestionResponse(3)">Mysterious</button> <button onclick="secondQuestionResponse(4)">Strong</button>
 
+</div>
+<div style="display:none"class="smallBox"id="thirdQuestion">
+    <p>Among the following choices, identify the most important quality to find in an ideal friend.</p>
+    <button onclick="thirdQuestionResponse(1)">Kind</button> <button onclick="thirdQuestionResponse(2)">Loyal</button>
+    <button onclick="thirdQuestionResponse(3)">Fun</button> <button onclick="thirdQuestionResponse(4)">Intelligent</button>
+</div>
 
+    <button style="display:none" onclick="calcWinners();" class="chocolate"id="calcDebug">Calc</button>
+
+    <div class="smallBox" style="display:none" id="resultBox">Your result is: <p id="resultDisplay"></p></div>
 
 
 <footer><script src="elementquiz.js"></script></footer>
