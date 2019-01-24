@@ -85,7 +85,6 @@ function resetGame() {
     introPrompt.style.display = "none"
     startButton.style.display = "inline-block"
     resultBox.style.display = "none"
-    resultDisplay.style.display = "none"
 
 }
 
