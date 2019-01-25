@@ -24,6 +24,24 @@ var thirdQuestion = document.getElementById("thirdQuestion")
 var calcDebug = document.getElementById("calcDebug")
 var resultDisplay = document.getElementById("resultDisplay")
 var resultBox = document.getElementById("resultBox")
+var introSkipper = document.getElementById("introSkipper")
+var tieChecker = document.getElementById("tieChecker")
+var doorRoom = document.getElementById("doorRoom")
+var sunDoor = document.getElementById("sunDoor")
+var moonDoor = document.getElementById("moonDoor")
+var skyDoor = document.getElementById("skyDoor")
+var waterDoor = document.getElementById("waterDoor")
+var stoneDoor = document.getElementById("stoneDoor")
+var fireDoor = document.getElementById("fireDoor")
+var iceDoor = document.getElementById("iceDoor")
+var lifeDoor = document.getElementById("lifeDoor")
+var mindDoor = document.getElementById("mindDoor")
+var lightningDoor = document.getElementById("lightningDoor")
+var lightDoor = document.getElementById("lightDoor")
+var darkDoor = document.getElementById("darkDoor")
+var progressNumber = 0;
+
+
 
 
 var valuesAreTied = false;
@@ -85,48 +103,79 @@ function resetGame() {
     introPrompt.style.display = "none"
     startButton.style.display = "inline-block"
     resultBox.style.display = "none"
+    introSkipper.style.display = "inline-block"
+    tieChecker.style.display = "none"
+    doorRoom.style.display = "none"
+    sunDoor.style.display = "none"
+    moonDoor.style.display = "none"
+    skyDoor.style.display = "none"
+    waterDoor.style.display = "none"
+    stoneDoor.style.display = "none"
+    fireDoor.style.display = "none"
+    iceDoor.style.display = "none"
+    lifeDoor.style.display = "none"
+    mindDoor.style.display = "none"
+    lightningDoor.style.display = "none"
+    lightDoor.style.display = "none"
+    darkDoor.style.display = "none"
+    progressNumber = 0;
 
 }
 
 function openIntroduction() {
-    if (intro1.style.display === "none") {
+    
+    progressNumber += 1;
+
+    if (progressNumber === 1) {
         startButton.innerText = "Click to continue."
         intro1.style.display = "block"
     }
-    else if (intro2.style.display === "none") {
+    else if (progressNumber === 2) {
+        intro1.style.display = "none"
         intro2.style.display = "block"
     }
-    else if (intro3.style.display === "none") {
+    else if (progressNumber === 3) {
+        intro2.style.display = "none"
         intro3.style.display = "block"
     }
-    else if (intro4.style.display === "none") {
+    else if (progressNumber === 4) {
+        intro3.style.display = "none"
         intro4.style.display = "block"
     }
-    else if (intro5.style.display === "none") {
+    else if (progressNumber === 5) {
+        intro4.style.display = "none"
         intro5.style.display = "block"
     }
-    else if (intro6.style.display === "none") {
+    else if (progressNumber === 6) {
+        intro5.style.display = "none"
         intro6.style.display = "block"
     }
-    else if (intro7.style.display === "none") {
+    else if (progressNumber === 7) {
+        intro6.style.display = "none"
         intro7.style.display = "block"
     }
-    else if (intro8.style.display === "none") {
+    else if (progressNumber === 8) {
+        intro7.style.display = "none"
         intro8.style.display = "block"
     }
-    else if (intro9.style.display === "none") {
+    else if (progressNumber === 9) {
+        intro8.style.display = "none"
         intro9.style.display = "block"
     }
-    else if (intro10.style.display === "none") {
+    else if (progressNumber === 10) {
+        intro9.style.display = "none"
         intro10.style.display = "block"
     }
-    else if (intro11.style.display === "none") {
+    else if (progressNumber === 11) {
+        intro10.style.display = "none"
         intro11.style.display = "block"
     }
-    else if (intro12.style.display === "none") {
+    else if (progressNumber === 12) {
+        intro11.style.display = "none"
         intro12.style.display = "block"
     }
-    else if (intro13.style.display === "none") {
+    else if (progressNumber >= 13) {
+        intro12.style.display = "none"
         intro13.style.display = "block"
         introPrompt.style.display = "block"
 
@@ -151,6 +200,7 @@ function continue2() {
     quitButton.style.display = "block"
     startButton.style.display = "none"
     firstQuestion.style.display = "inline-block"
+    introSkipper.style.display = "none"
 
 }
 
@@ -193,142 +243,163 @@ function firstQuestionResponse(x) {
 }
 
 function tieBreaker() {
-    calcDebug.style.display = "none"
-    if (valuesAreTied == true) {
-        var doorChoices = []
+    calcDebug.style.display = "none" 
+    var doorChoices = []
 
 
+    for (var i = 0; i < winners.length; i++) {
 
-        for (var i = 0; i < winners.length; i++) {
-            function candidate() {
-                var k = winners[i]
-                doorChoices.push(k)
-
-            }
-            if (winners[i] === "light") {
-                alert("One door is a humble wooden door with no decoration.")
-
-            }
-            else if (winners[i] === "water") {
-                alert("One door is made of glass. It is blue and green, and sparkles in the light.")
-
-            }
-            else if (winners[i] === "sun") {
-                alert("One door is laced with gold, with a lovely small window letting in sunlight.")
-            }
-            else if (winners[i] === "moon") {
-                alert("One door is painted black with silvery glitter across the center.")
-            }
-            else if (winners[i] === "sky") {
-                alert("One is not a door, it is a blue archway that lets in cool air.")
-            }
-            else if (winners[i] === "stone") {
-                alert("One is a sturdy, steel door with a solid impact resistant frame.")
-            }
-            else if (winners[i] === "fire") {
-                alert("One is a metal door with bright red and white lights all around.")
-            }
-            else if (winners[i] === "ice") {
-                alert("One is a clear door made entirely of perfectly transparent glass.")
-            }
-            else if (winners[i] === "dark") {
-                alert("One is a wooden door with a glass window revealing black emptiness behind.")
-            }
-            else if (winners[i] === "lightning") {
-                alert("One is a door covered in bright neon lights.")
-            }
-            else if (winners[i] === "life") {
-                alert("One is a mossy wooden door which smells of roses.")
-            }
-            else if (winners[i] === "mind") {
-                alert("One door looks more like a crystal mirror. You clearly see your face.")
-            }
-            else {
-
-            }
-            candidate();
-
-
-        }
-        console.log("DOOR CHOICES: " + doorChoices)
-        console.log("WINNERS: " + winners)
-
-
-
-        while (finalResult === " ") {
-            var doorPROMPT = parseFloat(prompt("CHOOSE A DOOR."));
-
-            if (doorPROMPT > doorChoices.length) {
-                alert("Invalid. Try again.")
-            }
-            else if (doorPROMPT === 1) {
-                resultBox.style.display = "inline-block"
-                resultDisplay.innerText = doorChoices[0]
-                console.log("The result is: " + doorChoices[0])
-                finalResult = doorChoices[0]
-            }
-            else if (doorPROMPT === 2) {
-                resultBox.style.display = "inline-block"
-                resultDisplay.innerText = doorChoices[1]
-                console.log("The result is: " + doorChoices[1])
-                finalResult = doorChoices[1]
-            }
-            else if (doorPROMPT === 3) {
-                resultBox.style.display = "inline-block"
-                resultDisplay.innerText = doorChoices[2]
-                console.log("The result is: " + doorChoices[2])
-                finalResult = doorChoices[2]
-            }
-            else if (doorPROMPT === 4) {
-                resultBox.style.display = "inline-block"
-                resultDisplay.innerText = doorChoices[3]
-                console.log("The result is: " + doorChoices[3])
-                finalResult = doorChoices[3]
-            }
-            else if (doorPROMPT === 5) {
-                resultBox.style.display = "inline-block"
-                resultDisplay.innerText = doorChoices[4]
-                console.log("The result is: " + doorChoices[4])
-                finalResult = doorChoices[4]
-            }
-            else if (doorPROMPT === 6) {
-                resultBox.style.display = "inline-block"
-                resultDisplay.innerText = doorChoices[5]
-                console.log("The result is: " + doorChoices[5])
-                finalResult = doorChoices[5]
-            }
-            else if (doorPROMPT === 7) {
-                resultBox.style.display = "inline-block"
-                resultDisplay.innerText = doorChoices[6]
-                console.log("The result is: " + doorChoices[6])
-                finalResult = doorChoices[6]
-            }
-            else if (doorPROMPT === 8) {
-                resultBox.style.display = "inline-block"
-                resultDisplay.innerText = doorChoices[7]
-                console.log("The result is: " + doorChoices[7])
-                finalResult = doorChoices[7]
-            }
-            else if (doorPROMPT === 9) {
-                resultBox.style.display = "inline-block"
-                resultDisplay.innerText = doorChoices[8]
-                console.log("The result is: " + doorChoices[8])
-                finalResult = doorChoices[8]
-            }
-            else {
-                var escape = prompt("Type 0 to abort.")
-                if (escape === "0") {
-                    finalResult = "wrench"
-                }
-            }
-
+        function candidate() {
+            var k = winners[i]
+            doorChoices.push(k)
         }
 
+
+
+        candidate();
+        if (winners[i] === "light") {
+            lightDoor.style.display = "inline-block"
+        }
+        else if (winners[i] === "water") {          
+            waterDoor.style.display = "inline-block"
+        }
+        else if (winners[i] === "sun") {
+            sunDoor.style.display = "inline-block"
+        }
+        else if (winners[i] === "moon") {
+            moonDoor.style.display = "inline-block"
+        }
+        else if (winners[i] === "sky") {
+            skyDoor.style.display = "inline-block"
+        }
+        else if (winners[i] === "stone") {
+            stoneDoor.style.display = "inline-block"
+        }
+        else if (winners[i] === "fire") {
+            fireDoor.style.display = "inline-block"
+        }
+        else if (winners[i] === "ice") {
+            iceDoor.style.display = "inline-block"
+        }
+        else if (winners[i] === "dark") {
+            darkDoor.style.display = "inline-block"
+        }
+        else if (winners[i] === "lightning") {
+            lightningDoor.style.display = "inline-block"
+        }
+        else if (winners[i] === "life") {
+            lifeDoor.style.display = "inline-block"
+        }
+        else if (winners[i] === "mind") {
+            mindDoor.style.display = "inline-block"
+
+        }
+        else { }
+
+
+    }
+
+    console.log("DOOR CHOICES: " + doorChoices)
+    console.log("WINNERS: " + winners)
+
+
+
+}
+
+function getWinner(y) {
+    var doorPROMPT = y;
+        
+    if (doorPROMPT === "") {
+
+        alert("Invalid. Try again.")
+    }
+    else if (doorPROMPT === 1) {
+        resultBox.style.display = "inline-block"
+        resultDisplay.innerText = "sun"
+        console.log("The result is: sun")
+        finalResult = elements.sun
+    }
+    else if (doorPROMPT === 2) {
+        resultBox.style.display = "inline-block"
+        resultDisplay.innerText = "moon"
+        console.log("The result is: moon")
+        finalResult = elements.moon
+    }
+    else if (doorPROMPT === 3) {
+        resultBox.style.display = "inline-block"
+        resultDisplay.innerText = "sky"
+        console.log("The result is: sky")
+        finalResult = elements.sky
+    }
+    else if (doorPROMPT === 4) {
+        resultBox.style.display = "inline-block"
+        resultDisplay.innerText = "water"
+        console.log("The result is: water")
+        finalResult = elements.water
+    }
+    else if (doorPROMPT === 5) {
+        resultBox.style.display = "inline-block"
+        resultDisplay.innerText = "stone"
+        console.log("The result is: stone")
+        finalResult = elements.stone
+    }
+    else if (doorPROMPT === 6) {
+        resultBox.style.display = "inline-block"
+        resultDisplay.innerText = "fire"
+        console.log("The result is: fire")
+        finalResult = elements.fire
+    }
+    else if (doorPROMPT === 7) {
+        resultBox.style.display = "inline-block"
+        resultDisplay.innerText = "ice"
+        console.log("The result is: ice")
+        finalResult = elements.ice
+    }
+    else if (doorPROMPT === 8) {
+        resultBox.style.display = "inline-block"
+        resultDisplay.innerText = "life"
+        console.log("The result is: life")
+        finalResult = elements.life
+    }
+    else if (doorPROMPT === 9) {
+        resultBox.style.display = "inline-block"
+        resultDisplay.innerText = "mind"
+        console.log("The result is: mind")
+        finalResult = elements.mind
+    }
+    else if (doorPROMPT === 10) {
+        resultBox.style.display = "inline-block"
+        resultDisplay.innerText = "lightning"
+        console.log("The result is: lightning")
+        finalResult = elements.lightning
+    }
+    else if (doorPROMPT === 11) {
+        resultBox.style.display = "inline-block"
+        resultDisplay.innerText = "light"
+        console.log("The result is: light")
+        finalResult = elements.light
+    }
+    else if (doorPROMPT === 12) {
+        resultBox.style.display = "inline-block"
+        resultDisplay.innerText = "dark"
+        console.log("The result is: dark")
+        finalResult = elements.dark
+    }
+    else { }
+
+    if (doorPROMPT > 0) {
+        doorRoom.style.display = "none"
     }
 }
 
+        
+
+    
+
+
 
 function calcWinners() {
+    tieChecker.style.display = "none"
     var keys = Object.keys(elements)
     var values = Object.values(elements)
     var LARGEST = Math.max(...values)
@@ -345,6 +416,7 @@ function calcWinners() {
         console.log("TIE.")
         valuesAreTied = true
         tieBreaker();
+        doorRoom.style.display = "inline-block"
         
 
 
@@ -411,6 +483,7 @@ function thirdQuestionResponse(x) {
         elements.water += 1;
         elements.sun += 1;
         thirdQuestion.style.display = "none"
+        tieChecker.style.display = "inline-block"
         calcDebug.style.display = "inline-block"
     }
     else if (x === 2) {
@@ -418,6 +491,7 @@ function thirdQuestionResponse(x) {
         elements.water += 1;
         elements.stone += 1;
         thirdQuestion.style.display = "none"
+        tieChecker.style.display = "inline-block"
         calcDebug.style.display = "inline-block"
         
     }
@@ -426,6 +500,7 @@ function thirdQuestionResponse(x) {
         elements.lightning += 1;
         elements.life += 1;
         thirdQuestion.style.display = "none"
+        tieChecker.style.display = "inline-block"
         calcDebug.style.display = "inline-block"
         
     }
@@ -434,6 +509,7 @@ function thirdQuestionResponse(x) {
         elements.mind += 1;
         elements.moon += 1;
         thirdQuestion.style.display = "none"
+        tieChecker.style.display = "inline-block"
         calcDebug.style.display = "inline-block"
         
 

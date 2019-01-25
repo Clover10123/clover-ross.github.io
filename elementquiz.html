@@ -14,7 +14,7 @@
     <hr />
 <h1>Welcome, wandering soul.</h1>
 <div>
-    <button onclick="openIntroduction()"style="display:inline-block" class="vanilla" id="starter"> Click to begin. </button>
+    <button onclick="openIntroduction()"style="display:inline-block" class="vanilla" id="starter"> Click to begin. </button> <button style="display:none"onclick="continue2();" class="lime" id="introSkipper">Skip Intro</button>
     <br>
     <p style="display:none" id="intro1"> Welcome to my little game. Here, I will tell you all about the magic of my universe.</p>
     <br />
@@ -53,9 +53,18 @@
     <button onclick="thirdQuestionResponse(3)">Fun</button> <button onclick="thirdQuestionResponse(4)">Intelligent</button>
 </div>
 
-    <button style="display:none" onclick="calcWinners();" class="chocolate"id="calcDebug">Calc</button>
-
-    <div class="smallBox" style="display:none" id="resultBox">Your result is: <p id="resultDisplay"></p></div>
+<div id="tieChecker" style="display:none" class="smallBox">
+    A tiny crystal ball before you begins to swirl with colors of light.
+    <button style="display:none" onclick="calcWinners();" class="chocolate" id="calcDebug">Peer into the glass...</button>
+</div>
+<div id="doorRoom" style="display:none" class="doorRoomBox">
+    <button style="display:none"onclick="getWinner(1);"id="sunDoor">Sun</button>    <button style="display:none"onclick="getWinner(2)"id="moonDoor">Moon</button>    <button style="display:none"onclick="getWinner(3)"id="skyDoor">Sky</button>    <button style="display:none"onclick="getWinner(4)" id="waterDoor">Water</button>
+    <button style="display:none"onclick="getWinner(5)"id="stoneDoor">Stone</button>    <button style="display:none"onclick="getWinner(6)" id="fireDoor">Fire</button>    <button style="display:none"onclick="getWinner(7)" id="iceDoor">Ice</button>    <button style="display:none"onclick="getWinner(8)" id="lifeDoor">Life</button>
+    <button style="display:none"onclick="getWinner(9)" id="mindDoor">Mind</button>    <button style="display:none"onclick="getWinner(10)"id="lightningDoor">Lightning</button>    <button style="display:none"onclick="getWinner(11)" id="lightDoor">Light</button>    <button style="display:none" onclick="getWinner(12)" id="darkDoor">Dark</button>
+</div>
+   
+<br />
+<div class="smallBox" style="display:none" id="resultBox">Your result is: <p id="resultDisplay"></p></div>
 
 
 <footer><script src="elementquiz.js"></script></footer>
