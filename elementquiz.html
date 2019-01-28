@@ -57,14 +57,82 @@
     A tiny crystal ball before you begins to swirl with colors of light.
     <button style="display:none" onclick="calcWinners();" class="chocolate" id="calcDebug">Peer into the glass...</button>
 </div>
-<div id="doorRoom" style="display:none" class="doorRoomBox">
-    <button style="display:none"onclick="getWinner(1);"id="sunDoor">Sun</button>    <button style="display:none"onclick="getWinner(2)"id="moonDoor">Moon</button>    <button style="display:none"onclick="getWinner(3)"id="skyDoor">Sky</button>    <button style="display:none"onclick="getWinner(4)" id="waterDoor">Water</button>
-    <button style="display:none"onclick="getWinner(5)"id="stoneDoor">Stone</button>    <button style="display:none"onclick="getWinner(6)" id="fireDoor">Fire</button>    <button style="display:none"onclick="getWinner(7)" id="iceDoor">Ice</button>    <button style="display:none"onclick="getWinner(8)" id="lifeDoor">Life</button>
-    <button style="display:none"onclick="getWinner(9)" id="mindDoor">Mind</button>    <button style="display:none"onclick="getWinner(10)"id="lightningDoor">Lightning</button>    <button style="display:none"onclick="getWinner(11)" id="lightDoor">Light</button>    <button style="display:none" onclick="getWinner(12)" id="darkDoor">Dark</button>
+    <div id="transitionToDoorRoom" style="display:none" class="doorRoomBox">
+        The ball bursts with a flash of blinding light, and suddenly you find yourself in the center of a strange room.
+        You see some doors in front of you. You must choose a door to enter.
+        <br />
+        <button id="showDoors" onclick="showTheDoors()">Proceed</button>
+    </div>
+
+
+<div id="doorRoom" style="display:none" class="">
+    <div id="sunDoor" style="display:none">
+        <img src="images/sundoor.png" alt="sundoor" width="260" height="428"/>
+        <br />
+    <button onclick="getWinner(1);" >It's laced with gold, and has sunlight coming out.</button>
+    </div>  
+    <br />
+    <div id="moonDoor" style="display:none">
+        <img src="images/moondoor.png" alt="moondoor"  width="260" height="428"/>
+        <br />
+    <button onclick="getWinner(2)">It's painted black and has sparkles in the center.</button>
+    </div><br />
+    <div id="skyDoor" style="display:none">
+        <img src="images/skydoor.png" alt="skydoor"  width="260" height="428"/>
+        <br />
+    <button onclick="getWinner(3)">This isn't a door, it's an archway. Cool air is flowing in.</button>
+    </div>   <br />    
+    <div id="waterDoor" style="display:none" >
+    <img src="images/waterdoor.png" alt="waterdoor" width="260" height="428"/>
+    <br />
+    <button onclick="getWinner(4)">It's made entirely of glass. It sparkles in the light.</button></div>
+    <div id="stoneDoor" style="display:none">
+        <img src="images/stonedoor.png" alt="stonedoor"  width="260" height="428"/>
+        <br />
+    <button onclick="getWinner(5)">It's made entirely of hardy steel. It's very strong.</button>
+    </div> <br />   
+    <div id="fireDoor" style="display:none">
+        <img src="images/firedoor.png" alt="firedoor"  width="260" height="428"/>
+        <br />
+    <button onclick="getWinner(6)">The closer you get to this door, the hotter the air gets.</button>
+    </div>   <br />
+    <div id="iceDoor" style="display:none">
+        <img src="images/icedoor.png" alt="icedoor"  width="260" height="428"/>
+        <br />
+    <button onclick="getWinner(7)">This door is made entirely of crystal glass.</button>
+    </div><br />
+    <div id="lifeDoor" style="display:none">
+        <img src="images/lifedoor.png" alt="lifedoor" width="260" height="428"/>
+        <br />
+    <button onclick="getWinner(8)">This mossy door smells faintly of bamboo and roses.</button>
+    </div><br />
+    <div id="mindDoor" style="display:none">
+        <img src="images/minddoor.png" alt="minddoor"  width="260" height="428"/>
+        <br />
+    <button onclick="getWinner(9)">It's just a mirror. You can see your shadow in it, but not your face...</button>
+    </div>    <br />
+    <div id="lightningDoor" style="display:none">
+        <img src="images/lightningdoor.png" alt="lightningdoor" width="260" height="428"/>
+        <br />
+    <button onclick="getWinner(10)">This door has glowing neon lights on it.</button>
+    </div><br />
+    <div id="lightDoor" style="display:none"> 
+    <img src="images/lightdoor.png" alt="lightdoor" width="260" height="428"/>
+    <br />
+    <button onclick="getWinner(11)">It's just wooden, nothing special.</button>
+    </div>  <br />  
+    <div id="darkDoor" style="display:none">
+        <img src="images/darkdoor.png" alt="darkdoor"  width="260" height="428"/>
+        <br />
+        <button onclick="getWinner(12)">There is a deep, empty darkness seen in the window.</button>
+    </div>
 </div>
    
 <br />
-<div class="smallBox" style="display:none" id="resultBox">Your result is: <p id="resultDisplay"></p></div>
+<div class="smallBox" style="display:none" id="resultBox">If you lived in my universe, your powers would be: <p id="resultDisplay"></p>
+    <p id="powerDescription"></p>
+    
+    </div>
 
 
 <footer><script src="elementquiz.js"></script></footer>

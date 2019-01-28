@@ -39,6 +39,8 @@ var mindDoor = document.getElementById("mindDoor")
 var lightningDoor = document.getElementById("lightningDoor")
 var lightDoor = document.getElementById("lightDoor")
 var darkDoor = document.getElementById("darkDoor")
+var transitionToDoorRoom = document.getElementById("transitionToDoorRoom")
+var powerDescription = document.getElementById("powerDescription")
 var progressNumber = 0;
 
 
@@ -118,6 +120,8 @@ function resetGame() {
     lightningDoor.style.display = "none"
     lightDoor.style.display = "none"
     darkDoor.style.display = "none"
+    transitionToDoorRoom.style.display = "none"
+    powerDescription.innerText =" "
     progressNumber = 0;
 
 }
@@ -301,6 +305,7 @@ function tieBreaker() {
 
     console.log("DOOR CHOICES: " + doorChoices)
     console.log("WINNERS: " + winners)
+    
 
 
 
@@ -318,72 +323,85 @@ function getWinner(y) {
         resultDisplay.innerText = "sun"
         console.log("The result is: sun")
         finalResult = elements.sun
+        powerDescription.innerText = "Those with Sun powers control radiation: ultraviolet, microwave, or even gamma radiation. You can deal massive damage or you can cure diseases with these abilities."
     }
     else if (doorPROMPT === 2) {
         resultBox.style.display = "inline-block"
         resultDisplay.innerText = "moon"
         console.log("The result is: moon")
         finalResult = elements.moon
+        powerDescription.innerText = "Those with Moon powers control gravitational forces. You can make an object weightless or cause it to weight more. You can lift and move things easily."
     }
     else if (doorPROMPT === 3) {
         resultBox.style.display = "inline-block"
         resultDisplay.innerText = "sky"
         console.log("The result is: sky")
         finalResult = elements.sky
+        powerDescription.innerText = "Those with Sky powers control gaseous substances. Insert air forcefully or remove air forcefully. You can fly and cause wind storms."
     }
     else if (doorPROMPT === 4) {
         resultBox.style.display = "inline-block"
         resultDisplay.innerText = "water"
         console.log("The result is: water")
         finalResult = elements.water
+        powerDescription.innerText = "Those with Water powers control all liquid substances-- not just water alone. Liquify objects or pull liquid from the air. You can swim without trouble and you can purify any water."
+
     }
     else if (doorPROMPT === 5) {
         resultBox.style.display = "inline-block"
         resultDisplay.innerText = "stone"
         console.log("The result is: stone")
         finalResult = elements.stone
+        powerDescription.innerText = "Those with Stone powers control solid substances-- metals, minerals, and stones alike. Build towers, cause earthquakes, or destroy buildings."
     }
     else if (doorPROMPT === 6) {
         resultBox.style.display = "inline-block"
         resultDisplay.innerText = "fire"
         console.log("The result is: fire")
         finalResult = elements.fire
+        powerDescription.innerText = "Those with Fire powers can create combustion reactions in any environment. In forests, in rain, even in snow. You can always have heat and start engines."
     }
     else if (doorPROMPT === 7) {
         resultBox.style.display = "inline-block"
         resultDisplay.innerText = "ice"
         console.log("The result is: ice")
         finalResult = elements.ice
+        powerDescription.innerText = "Those with Ice powers can eject heat out from any object, not just water. Cause blizzards or just keep your lunch cold."
     }
     else if (doorPROMPT === 8) {
         resultBox.style.display = "inline-block"
         resultDisplay.innerText = "life"
         console.log("The result is: life")
         finalResult = elements.life
+        powerDescription.innerText= "Those with Life powers can manipulate biological systems of all types. Manipulate cellular structures or heal wounded animals."
     }
     else if (doorPROMPT === 9) {
         resultBox.style.display = "inline-block"
         resultDisplay.innerText = "mind"
         console.log("The result is: mind")
         finalResult = elements.mind
+        powerDescription.innerText = "Those with Mind powers can manipulate consciousnesses. Read thoughts, move objects, and see the future."
     }
     else if (doorPROMPT === 10) {
         resultBox.style.display = "inline-block"
         resultDisplay.innerText = "lightning"
         console.log("The result is: lightning")
         finalResult = elements.lightning
+        powerDescription.innerText = "Those with Lightning powers can manipulate electrons. Restart or disrupt electronic systems or cause paralysis."
     }
     else if (doorPROMPT === 11) {
         resultBox.style.display = "inline-block"
         resultDisplay.innerText = "light"
         console.log("The result is: light")
         finalResult = elements.light
+        powerDescription.innerText= "Those with Light powers can interact with the soul, or the willpower of a being. Divine power inspires courage or force subordination."
     }
     else if (doorPROMPT === 12) {
         resultBox.style.display = "inline-block"
         resultDisplay.innerText = "dark"
         console.log("The result is: dark")
         finalResult = elements.dark
+        powerDescription.innerText="Those with Dark powers can manipulate the emptiness between matter. Inject empty space between particles to teleport quickly or create a small vacuum."
     }
     else { }
 
@@ -394,7 +412,10 @@ function getWinner(y) {
 
         
 
-    
+function showTheDoors() {
+    doorRoom.style.display = "inline-block"
+    transitionToDoorRoom.style.display = "none"
+}    
 
 
 
@@ -406,17 +427,21 @@ function calcWinners() {
     for (var i = 0; i < keys.length; i++) {
         if (values[i] === LARGEST) {
             var x = winners.push(keys[i])
-            console.log("Largest: " + LARGEST)
+            
 
         }
     }
+    console.log("Largest: " + LARGEST)
+    console.log("Values: " + values)
+    console.log("Keys: " + keys)
 
 
     if (winners.length > 1) {
         console.log("TIE.")
         valuesAreTied = true
         tieBreaker();
-        doorRoom.style.display = "inline-block"
+        
+        transitionToDoorRoom.style.display = "inline-block"
         
 
 
