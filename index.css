@@ -18,6 +18,22 @@ html {
   
   }
 
+  #aboutPage{
+      background-color:white;
+      padding: 15px;
+  }
+  #biography{
+      background-color: white;
+      width: 700px;
+     
+  }
+  #artistStatement{
+      background-color:white;
+  }
+  .descriptiveParagraph{
+      background-color:white;
+  }
+
 .chocolate {
     background-color: #503909;
     color: #bba37f;
