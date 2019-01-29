@@ -15,6 +15,8 @@ function showBio() {
     if (bioIsShowing === false) {
         biography.style.display = "inline-block"
         bioIsShowing = true;
+        artistStatement.style.display = "none"
+        aboutPage.style.display = "none"
 
     }
     else if (aboutPageIsShowing === true) {
@@ -32,6 +34,8 @@ function showBio() {
     }
     else {
         biography.style.display = "none"
+        artistStatement.style.display = "none"
+        aboutPage.style.display = "none"
         bioIsShowing = false;
     }
 
@@ -41,6 +45,8 @@ function showArtStatement() {
     if (artStatementIsShowing === false) {
         artistStatement.style.display = "inline-block"
         artStatementIsShowing = true;
+        biography.style.display = "none"
+        aboutPage.style.display = "none"
     }
     else if (bioIsShowing === true) {
         artistStatement.style.display = "inline-block"
@@ -57,6 +63,8 @@ function showArtStatement() {
     else {
         artistStatement.style.display = "none"
         artStatementIsShowing = false;
+        biography.style.display = "none"
+        aboutPage.style.display = "none"
     }
 }
 
@@ -64,6 +72,8 @@ function showAbout() {
     if (aboutPageIsShowing === false) {
         aboutPage.style.display = "inline-block";
         aboutPageIsShowing = true;
+        biography.style.display = "none"
+        artistStatement.style.display = "none"
     }
     else if (artStatementIsShowing === true) {
         aboutPage.style.display = "inline-block"
@@ -81,6 +91,8 @@ function showAbout() {
     else {
         aboutPage.style.display = "none"
         aboutPageIsShowing = false;
+        biography.style.display = "none"
+        artistStatement.style.display = "none"
     }
 
 }
