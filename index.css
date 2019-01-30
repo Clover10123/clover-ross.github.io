@@ -7,7 +7,7 @@ html {
   
   
   body {
-    background-color:white;
+    background-color:black;
     padding:0;
     margin: 0;
     bottom: 0;
@@ -42,12 +42,13 @@ html {
 .lime {
     background-color: #00ff00;
     color: darkgreen;
+    border-color: darkgreen;
 }
 
 .vanilla {
     background-color: #ffffe7;
     color: #ba8916;
-    border: 3px solid lightgoldenrodyellow;
+    border: 3px solid #ba8916;
 }
 
 .blueberry {
@@ -65,23 +66,24 @@ button:hover.vanilla {
     width: 100%;
     height: 100px;
    border: none;
-   background-color: white;
+   background-color: black;
    min-height: 100px;
 }
-  
-  
-  
-  .header{
-    margin:0;
-    padding:0;
+
+
+
+.header {
+    margin: 0;
+    padding: 0;
     top: 0;
     left: 0;
     right: 0;
-      font-size: 200%;
-    text-align:center;
-    background-color:#70dbdb;
+    font-size: 300%;
+    text-align: center;
+    background-color: #ff5151;
+    font-weight: bolder;
    
-  }
+}
   
   
   img{
@@ -96,40 +98,38 @@ button:hover.vanilla {
   
   footer{
     margin:0;
-  background-color:#99ccff;
+  background-color:darkred;
     left:0;
     right:0;
     bottom: 0;
   }
-  nav {
-    background-color:#70dbdb;
-      min-height:75px;
-    line-height:75px;
-    text-align:center;
+nav {
+    background-color: #ff5151;
+    min-height: 75px;
+    line-height: 75px;
+    text-align: center;
     margin: 0;
     padding: 0;
-  }
-  button{
-    background-color:#4d4dff;
+}
+button {
+    background-color: #891301;
     font-size: 16px;
     padding: 10px 16px;
-    color:#ffffff;
+    color: #ffffff;
     border: 5px solid black;
-    font-weight:bold;
+    font-weight: bold;
     border-radius: 4px;
-    
-  }
-  button:hover{
-  background-color:#70dbdb;
-    font-size: 16px;
-    padding: 10px 16px;
-    color:#000000;
-    border: 5px solid white;
-    font-weight:bold;
-    border-radius: 4px;
-    font-style:italic;
-  
-  }
+}
+    button:hover {
+        background-color: #ffdddd;
+        font-size: 16px;
+        padding: 10px 16px;
+        color: #000000;
+        border: 5px solid white;
+        font-weight: bold;
+        border-radius: 4px;
+        font-style: italic;
+    }
   
   p{
     color: black;
@@ -144,24 +144,23 @@ button:hover.vanilla {
   
   }
   hr { 
-    background-color: #669999;
-    color:#666699;
-    border-width: 5px;
+    border-color: darkred;
+    border-width: 10px;
+    padding: 0;
     
     
   
   }
-  div{
-    background-color:#70dbdb;
+div {
+    background-color: #ffffff;
     color: black;
     min-height: 500px;
     border: 5px solid black;
     max-width: 800px;
     /*line-height: 150%;*/
-     margin: 0 auto;
-     min-width: 500px; 
-  
-  }
+    margin: 0 auto;
+    min-width: 500px;
+}
   
   .center-div
   {
