@@ -85,12 +85,13 @@ button:hover.vanilla {
   
   
   img{
-    top: 0;
-    right: 0;
-    bottom:0;
-    left:0;
-    margin: 50px;
+    display: inline-block;
+    margin: 5px;
+    max-width: 300px;
   
+  }
+  .wideimage{
+      max-width: 500px;
   }
   
   footer{
