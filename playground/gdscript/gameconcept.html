@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<head>
+    <title>Game Concept</title>
+    <script type="text/javascript"src="gameconcept.js" ></script>
+<div> <button id="start" onclick="ready()">Start Game</button>
+    <button onclick="window.location.reload()">Restart Game</button><br>
+    <button id="showPlayers" onclick="showPlayers()" style="display:none">Show Players</button><br>
+
+    
+    <div id="playerScreen" style="display:none">
+        <p>Player One: <span id="PlayerOneName"></span></p>
+        <p>     Favorite: <span id="PlayerOneFavorite"></span></p>
+        <p>     Hated: <span id="PlayerOneHated"></span></p>
+        <p>Player Two: <span id="PlayerTwoName"></span></p>
+        <p>Player Three: <span id="PlayerThreeName"></span></p>
+    
+    </div><br>
+    
+    <button id="knocker" style="display: none" onclick="calculateSupply()">Knock on some doors!</button>
+    <button id="sorter" style="display: none" onclick="sortCandy();displayCandy()">Sort my candy</button><br>
+    <div id="results" style="display:none">
+    <p id="a"> </p>
+    <p>Peppermint: </p><p id="b"> </p>
+    <p>Chocolate: </p><p id="c"> </p>
+    <p>Sourgummy: </p><p id="d"> </p>
+    <p>Butterscotch: </p><p id="e"> </p>
+    </div><br>
+    <p>
+        <button id="adamKnocker" style="display: none" onclick="calculateCompetition()">Knock for Adam</button>
+        <button id="bellaKnocker" style="display: none" onclick="calculateCompetition1()">Knock for Bella</button>
+    </p>
+    <p>
+        <button id="beginTrade" style="display: none" onclick="prepareTrade();warning()">Begin Trade</button>
+        <p id="warning" style="display: none">This game is incomplete. Come back later.</p>
+    </p>
+
+<div id="secrets" style="display: none">
+<p>Oh shit you found my secret little panel.</p>
+<p>Basically, the concept is a supply and demand game. Each player has a predetermined "favorite" and "hated" candy choice, and that determines the demand of the candies in the game overall.</p>
+<span> A player who "favorites" a candy is more likely to ask for it, while a player who "hates" a candy is more likely to get rid of it.</span>
+<span> The supply and demand curves are tools the players use to determine how much each candy is worth to them and how likely they are to trade it with something better.</span>
+<p>Ideally, your goal is to have the most desirable candy basket by gaining the most of your own favorite candies while getting rid of your least desired candies.</p>
+<p>However, at the same time, you gain a bonus by having the greatest global value in your candy basket, which is why supply and demand is calculated.</p>
+<span> The value of the candies is personal to you based on your favorite/hated settings, but the global supply and demand is calculated as well. Based on these values, if you have lots of candies that other people favorited, your candy is overall more valuable than the others' in the game. </span>
+<p> But to be honest I haven't decided what should be the end goal: having the most global candy value, or maximizing your personal candy utility? Hmm...</p>
+
+
+</div>
+
+
+</div>
+
+
+</head>
+</html>

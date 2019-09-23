@@ -1,0 +1,104 @@
+extends KinematicBody2D
+
+var SPEED = 200.0
+
+enum STATES { IDLE, FOLLOW, SELECTED, ATTACK }
+var _state = STATES.IDLE
+
+var path = []
+var target_point_world = Vector2()
+var target_position = Vector2()
+#onready var right = $right
+#onready var left = $left
+var velocity = Vector2()
+var bodylist = []  
+
+func _ready():
+	_change_state(STATES.IDLE)
+
+
+func _change_state(new_state):
+	if new_state == STATES.FOLLOW:
+		path = get_parent().get_node('TileMap').find_path(position, target_position)
+		if not path or len(path) == 1:
+			_change_state(STATES.IDLE)
+			return
+		target_point_world = path[1]
+	if new_state == STATES.SELECTED:
+		var selected = true
+	if new_state == STATES.ATTACK:
+		print(len(bodylist))
+	_state = new_state
+
+
+func _process(delta):
+	if _state == STATES.FOLLOW:
+		var arrived_to_next_point = move_to(target_point_world)
+		if arrived_to_next_point:
+			path.remove(0)
+			if len(path) == 0:
+				if len(bodylist) > 0:
+					_change_state(STATES.ATTACK)
+					animatedSprite.play("attack")
+					animatedSprite.show()
+					animatedSpriteL.hide()
+					return
+				else:
+					_change_state(STATES.IDLE)
+					animatedSprite.show()
+					animatedSprite.play("idle")
+					animatedSpriteL.hide()
+					return
+			target_point_world = path[0]
+
+
+func move_to(world_position):
+	var MASS = 10.0
+	var ARRIVE_DISTANCE = 20.0
+
+	var desired_velocity = (world_position - position).normalized() * SPEED
+	var steering = desired_velocity - velocity
+	velocity += steering / MASS
+	position += velocity * get_process_delta_time()
+	if (target_position.x - position.x >= 0):
+		#it's moving right
+		animatedSprite.show()
+		animatedSprite.play("walkR")
+		animatedSpriteL.hide()
+	if (target_position.x - position.x < 0):
+		#it's moving left
+		animatedSpriteL.show()
+		animatedSprite.hide()
+		animatedSpriteL.play("walkL")
+	return position.distance_to(world_position) < ARRIVE_DISTANCE
+
+
+func _input(event):
+	if isEnemy == false:
+		if event.is_action_pressed('click'):
+			if _state == STATES.SELECTED:
+				target_position = get_global_mouse_position()
+				_change_state(STATES.FOLLOW)
+
+
+func _on_ToolButton_pressed():
+	if isEnemy == false:
+		if _state == STATES.IDLE:
+			_change_state(STATES.SELECTED)
+		if _state == STATES.ATTACK:
+			_change_state(STATES.SELECTED)
+			return
+
+
+
+func _on_Area2D_body_entered(body):
+	if body.get_collision_mask() == 2:
+		bodylist.append(body)
+		body.kill()
+ # Replace with function body.
+
+
+func _on_Area2D_body_exited(body):
+	if body.get_collision_mask() == 2:
+		bodylist.remove(0)
+	pass # Replace with function body.
