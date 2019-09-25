@@ -39,7 +39,6 @@ function ready() {
   while(playerOne.name == ""){
   playerOne.name = prompt("Enter your name.").toUpperCase()
   }
- alert("In this world, there are four candy types: peppermint, butterscotch, chocolate, and sourgummy.")
   while(playerOne.favorite == ""){
     var favorite = prompt("Among the candies, choose a favorite by typing the name.").toLowerCase()
   if (favorite == "butterscotch"){

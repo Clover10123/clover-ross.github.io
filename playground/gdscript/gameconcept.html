@@ -1,16 +1,22 @@
 <!DOCTYPE html>
 <head>
+    <link rel="stylesheet" href="gameconcept.css" type="text/css"><style></style>
     <title>Game Concept</title>
     <script type="text/javascript"src="gameconcept.js" ></script>
-<div> <button id="start" onclick="ready()">Start Game</button>
+</head>
+
+<nav>
+    <p class="header">Trick or Treat</p> 
+    <button id="start" onclick="ready()">Start Game</button>
     <button onclick="window.location.reload()">Restart Game</button><br>
     <button id="showPlayers" onclick="showPlayers()" style="display:none">Show Players</button><br>
-
-    
+</nav>
+<div>
+    <div id="candySelector">
+        <button class="chocolate">Chocolate</button> <button class="sourgummy">Sour Gummy</button> <button class="butterscotch">Butterscotch</button> <button class="peppermint">Peppermint</button>
+    </div>
     <div id="playerScreen" style="display:none">
-        <p>Player One: <span id="PlayerOneName"></span></p>
-        <p>     Favorite: <span id="PlayerOneFavorite"></span></p>
-        <p>     Hated: <span id="PlayerOneHated"></span></p>
+        <p>Player One: <span id="PlayerOneName"></span>, Favorite: <span id="PlayerOneFavorite"></span>,  Hated: <span id="PlayerOneHated"></span></p>
         <p>Player Two: <span id="PlayerTwoName"></span></p>
         <p>Player Three: <span id="PlayerThreeName"></span></p>
     
@@ -20,10 +26,10 @@
     <button id="sorter" style="display: none" onclick="sortCandy();displayCandy()">Sort my candy</button><br>
     <div id="results" style="display:none">
     <p id="a"> </p>
-    <p>Peppermint: </p><p id="b"> </p>
-    <p>Chocolate: </p><p id="c"> </p>
-    <p>Sourgummy: </p><p id="d"> </p>
-    <p>Butterscotch: </p><p id="e"> </p>
+    <p>Peppermint: <span id="b"> </span> </p>
+    <p>Chocolate: <span id="c"> </span></p>
+    <p>Sourgummy: <span id="d"> </span> </p>
+    <p>Butterscotch: <span id="e"> </span> </p>
     </div><br>
     <p>
         <button id="adamKnocker" style="display: none" onclick="calculateCompetition()">Knock for Adam</button>
@@ -51,5 +57,5 @@
 </div>
 
 
-</head>
+
 </html>

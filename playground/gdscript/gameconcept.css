@@ -1,0 +1,76 @@
+html {
+    font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
+}
+
+body {
+    background-color: white;
+    padding: 0;
+    margin: 0;
+    bottom: 0;
+    text-align: center;
+    align-content:center;
+    align-items:center;
+}
+
+
+nav {
+    background-color: #edc421;
+    min-height: 75px;
+    line-height: 75px;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+button {
+    background-color: #ffeca1;
+    font-size: 16px;
+    padding: 10px 16px;
+    color: #4a3d09;
+    border: 2px solid #4a3d09;
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+button:hover {
+    background-color: #ffffe7;
+    font-size: 16px;
+    padding: 10px 16px;
+    color: #bba37f;
+    border: 2px solid lightgoldenrodyellow;
+    font-weight: bold;
+    border-radius: 4px;
+    font-style: italic;
+}
+
+.header {
+    margin: 0;
+    padding: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    font-size: 200%;
+    text-align: center;
+    color: #4a3d09
+    
+}
+
+.peppermint {
+    background-color: white;
+    color: red
+}
+
+.chocolate{
+    background-color: #402906;
+    color: #f0d3b6
+}
+
+.sourgummy{
+    background-color: #44e300;
+    color:#ffff24
+}
+
+.butterscotch{
+    background-color: goldenrod;
+    color: #8a6c2b
+}
