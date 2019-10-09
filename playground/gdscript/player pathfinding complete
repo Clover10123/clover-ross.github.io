@@ -1,34 +1,4 @@
-extends KinematicBody2D
 
-var SPEED = 200.0
-
-enum STATES { IDLE, FOLLOW, SELECTED, ATTACK }
-var _state = STATES.IDLE
-
-var path = []
-var target_point_world = Vector2()
-var target_position = Vector2()
-#onready var right = $right
-#onready var left = $left
-var velocity = Vector2()
-var bodylist = []  
-
-func _ready():
-	_change_state(STATES.IDLE)
-
-
-func _change_state(new_state):
-	if new_state == STATES.FOLLOW:
-		path = get_parent().get_node('TileMap').find_path(position, target_position)
-		if not path or len(path) == 1:
-			_change_state(STATES.IDLE)
-			return
-		target_point_world = path[1]
-	if new_state == STATES.SELECTED:
-		var selected = true
-	if new_state == STATES.ATTACK:
-		print(len(bodylist))
-	_state = new_state
 
 
 func _process(delta):
@@ -39,23 +9,42 @@ func _process(delta):
 			if len(path) == 0:
 				if len(bodylist) > 0:
 					_change_state(STATES.ATTACK)
-					animatedSprite.play("attack")
+					animatedSprite.play("atkR")
 					animatedSprite.show()
 					animatedSpriteL.hide()
 					return
 				else:
 					_change_state(STATES.IDLE)
 					animatedSprite.show()
-					animatedSprite.play("idle")
+					animatedSprite.play("idleR")
 					animatedSpriteL.hide()
 					return
 			target_point_world = path[0]
+	if _state == STATES.PURSUIT:
+		if len(bodylist) == 0:
+			_change_state(STATES.IDLE)
+			return
+		var bodyPositionOffset = bodylist[0].position.x - 15
+		var bodyposition = Vector2(bodyPositionOffset, bodylist[0].position.y)
+		var arrived_to_enemy = move_to_enemy(bodyposition)
+		path = get_parent().get_node('TileMap').find_path(position, bodyposition)
+		if arrived_to_enemy:
+			path.remove(0)
+			if len(path) == 0:
+				if len(bodylist) > 0:
+					_change_state(STATES.ATTACK)
+					return
+				else:
+					_change_state(STATES.IDLE)
+					return
+
+
+
 
 
 func move_to(world_position):
 	var MASS = 10.0
 	var ARRIVE_DISTANCE = 20.0
-
 	var desired_velocity = (world_position - position).normalized() * SPEED
 	var steering = desired_velocity - velocity
 	velocity += steering / MASS
@@ -93,12 +82,16 @@ func _on_ToolButton_pressed():
 
 func _on_Area2D_body_entered(body):
 	if body.get_collision_mask() == 2:
-		bodylist.append(body)
-		body.kill()
+			bodylist.append(body)
+			if _state == STATES.IDLE:
+				_change_state(STATES.IDLE)
  # Replace with function body.
 
 
 func _on_Area2D_body_exited(body):
 	if body.get_collision_mask() == 2:
+		body.is_not_being_attacked()
 		bodylist.remove(0)
-	pass # Replace with function body.
+		if len(bodylist) == 0:
+			if _state == STATES.ATTACK:
+				_change_state(STATES.IDLE)

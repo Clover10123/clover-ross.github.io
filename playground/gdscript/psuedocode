@@ -1,0 +1,82 @@
+psuedo code. this isn't a real thing.
+
+
+special abilities.
+
+
+hipsters:
+
+tank: coffee, apron 
+
+    coffee: weapon. Does passive damage for five seconds
+
+        on press, if a body is in the area2d, 
+        body.is_being_special_damaged(new_attack) where new_attack is the amount of passive damage dealt by the coffee.
+
+    apron: boosts damage resistance
+
+        on press, defense increases by 2. lasts for 5 seconds
+
+ranged: Yoga gesture, vegan powers
+
+    yoga gesture: 
+        attack increased by 2 for 10 seconds.
+    vegan powers: KO ability
+        if bodylist > 0: attack = 100
+        if bodylist == 0: attack = 8
+
+melee: bear fist, woodcutting axe
+
+    bear fist: pushes the enemy back
+        if bodylist > 0:
+            body.position = push away by a "magnitude" of 5? look into magnitude.
+    woodcutting axe: major damage
+            on press, body.is_being_special_damaged(new_attack)
+
+support: boom box, vinyl records
+
+    boom box: local attack buff
+        if friendlylist > 0:
+            body.buff_attack(new_attack)
+    vinyl records: damage
+        if body.list > 0:
+            body.position = target
+            target.deal_damage(damage)    
+
+
+cowboys:
+
+tank: horse and whip
+
+    horse: move slightly faster for short time
+        for 5 seconds, mass = 5
+    whip: major damage
+        body.is_being_special_damaged(new_attack)
+
+ranged: hunting rifle,  hunting knife
+
+    hunting rifle: KO
+        if bodylist > 0: attack = 100
+        if bodylist == 0: attack = 8
+    hunting knife: major damage to any nearby enemy
+        if bodylist > 0:
+            for i in range(bodylist):
+                bodylist[i].is_being_special_damaged(new_attack)
+
+melee: revolver and beer
+
+    revolver: dmg any nearby enemy
+        body.is_being_special_damaged(new_attack)
+    beer: self heal at expense of temporary attack reduction
+        health += 5
+        for 5 seconds, attack = 5
+
+support: bible, holy water
+
+    bible: local defense buff
+        friendlylist.increase_defense()
+    holy water: reduces defense for all local enemies
+        bodylist.decrease_defense()
+
+
+
