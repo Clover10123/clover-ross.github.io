@@ -1,7 +1,7 @@
 var numChocolate = 00;
 var numVanilla = 00;
 var numLime = 00;
-
+var numStrawberry = 00;
 
 
 function addChoco(number)
@@ -25,18 +25,29 @@ function addLimes(number)
     
 }
 
+function addStraw(number) {
+  var x = number + numStrawberry;
+  numStrawberry = x;
+}
+
 
 function totalFlavor()
 {
-    var x = numVanilla + numLime + numChocolate;
-    console.log(x);
+    var x = numVanilla + numLime + numChocolate + numStrawberry;
     var percentVanilla = Math.ceil((numVanilla / x) * 100);
     var percentChocolate = Math.ceil((numChocolate / x) * 100);
     var percentLime = Math.ceil((numLime / x) * 100);
-    console.log(percentVanilla + " " + percentChocolate + " " + percentLime)
+    var percentStrawberry = Math.ceil((numStrawberry / x)*100);
     document.getElementById("chocpercent").innerText = percentChocolate;
     document.getElementById("limepercent").innerText = percentLime;
     document.getElementById("vanipercent").innerText = percentVanilla;
+    document.getElementById("strbpercent").innerText = percentStrawberry;
+    console.log("You sold some smoothies.")
+    console.log("Vanilla: "+numVanilla)
+    console.log("Chocolate: "+numChocolate)
+    console.log("Lime: "+numLime)
+    console.log("Strawberry: "+numStrawberry)
+
 
     if (numVanilla > numLime && numVanilla > numChocolate)
     {
@@ -49,6 +60,10 @@ function totalFlavor()
     else if (numLime > numVanilla && numLime > numChocolate)
     {
         document.getElementById("summary").innerText = "lime."
+    }
+    else if (numStrawberry > numLime && numStrawberry > numChocolate)
+    {
+      document.getElementById("summary").innerText = "strawberry."
     }
     else{}
 }

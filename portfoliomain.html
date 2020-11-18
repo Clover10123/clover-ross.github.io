@@ -9,7 +9,7 @@
 <body>
 <nav> <p class="header"> Clover's Game Portfolio </p>
 <a href="index.html"><button>Home</button></a> | <a href="portfoliomain.html"><button>Portfolio</button></a>
-                                                 <hr>
+ <hr>
 </nav>
 
 
@@ -18,19 +18,34 @@
   <a href="codelaboratory.html"><button>Code Laboratory</button></a>
   <a href="games/gamespage.html"><button>Games</button></a><br>
 <h3>Art</h3>
-    <a><button onclick="showVideos()">Video & Animations</button></a> | <a><button onclick="showDigital()">Digital Art</button></a> | <a><button onclick="showPhysical()">Physical Art</button></a>
+<!-- Art buttons -->
+    <!--
+    Video button
+    -->
+    <a><button onclick="showVideos()">Video & Animations</button></a> 
+    <!--
+    Digital Art button
+    -->
+    <!-- disabled --> <a><button style="display:none" onclick="showDigital()">Digital Art</button></a>
+    <!--
+    Physical Art button
+    -->
+    <!-- disabled --> <a><button style="display:none"onclick="showPhysical()">Physical Art</button></a>
     <br />
     <br />
+    <!-- Video & Animations display box -->
     <div style="display:none" class="smallBox" id="videosSection">  
         <a href="https://www.youtube.com/watch?v=aUalvUji678&feature=youtu.be" target="_blank">"The Prettiest Friend - Artistic Interpretation"</a>  
     </div>
+    <!-- Digital Art display box -->
     <div style="display:none" class="smallBox" id="digitalArtSection"> 
-    <a href="pixelart.html" target="_blank"><button>Pixel Art Gallery</button></a> 
-    <a href="digitalillustrations.html" target="_blank"><button>Digital Illustrations</button></a>
+    <a href="digitalart/pixelart.html"><button>Pixel Art Gallery</button></a> 
+    <a href="digitalart/digitalillustrations.html"><button>Digital Illustrations</button></a>
     </div>
+    <!-- Physical Art display box -->
     <div style="display:none" class="smallBox" id="physicalArtSection">
-        <a href="paintings.html" target="_blank"><button>Paintings</button></a>
-        <a href="illustrations.html" target="_blank"><button>Illustrations</button></a>
+        <a href="physicalart/paintings.html"><button>Paintings</button></a>
+        <a href="physicalart/illustrations.html"><button>Illustrations</button></a>
     </div>
 
 </div>
@@ -39,7 +54,7 @@
 </body>
 <footer>
     <hr>
-    Changes made: 4:00pm Jan 30, 2019
+    Changes made: Nov 18, 2020
     <script src="index.js"></script>
 </footer>
 
