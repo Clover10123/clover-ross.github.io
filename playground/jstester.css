@@ -45,7 +45,6 @@ html {
   {
     background-color:crimson;
     color: lightpink;
-    border: 3px solid darkgreen;
   }
   button:hover{
       color: white;
@@ -63,6 +62,14 @@ html {
     border: 3px solid hotpink
   }
   button:active
+  {
+    border: 3px solid white;
+  }
+  button:focus
+  {
+    border: 3px solid white;
+  }
+  button:visited
   {
     border: 3px solid white;
   }
