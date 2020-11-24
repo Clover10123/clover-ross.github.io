@@ -1,25 +1,143 @@
+
 <!DOCTYPE html>
 <html xml:lang="en" lang="en">
 <head>
-<link rel="stylesheet" href="http://clover10123.github.com/jstester.css" type="text/css"><style></style>
-<script src="http://clover10123.github.com/jstester.js"></script>
+  <link rel="stylesheet" href="jstester.css" type="text/css">
+<script src="elementquiz.js"></script>
 <title>Element Quiz</title>
 </head>
 <body>
   <nav>
     <p class="header">Clover's Game Portfolio</p>
-    <a href="http://clover10123.github.io/index.html"><button>Home</button></a>|<a href="http://clover10123.github.io/portfoliomain.html"><button>Portfolio</button></a>
+    <a href="../index.html"><button>Home</button></a>|
+    <a href="../portfoliomain.html"><button>Portfolio</button>
+    </a>
     </nav>
+    <hr />
 <h1>Welcome, wandering soul.</h1>
-  <div><button> Click to begin. </button>
-<br>
+<div>
+    <button onclick="openIntroduction()"style="display:inline-block" class="vanilla" id="starter"> Click to begin. </button> <button style="display:none"onclick="continue2();" class="lime" id="introSkipper">Skip Intro</button>
+    <br>
+    <p style="display:none" id="intro1"> Welcome to my little game. Here, I will tell you all about the magic of my universe.</p>
+    <br />
+    <button style="display:none" class="chocolate" onclick="continue1()" id="continue1">Continue</button>
+    <p style="display:none" id="intro2"> In this universe, there are 12 elements. </p>
+    <p style="display:none" id="intro3"> These twelve elements make up the physical structure of all things.</p>
+    <p style="display:none" id="intro4"> Intelligent creatures like yourself harness the power of these elements each day.</p>
+    <p style="display:none" id="intro5"> For instance... electricity powers your technology. You consume water for life.</p>
+    <p style="display:none" id="intro6"> A particularly gifted few can control these elements at will.</p>
+    <p style="display:none" id="intro7"> Some might even consider this control... magical.</p>
+    <p style="display:none" id="intro8"> Some may call it "technological prowess."</p>
+    <p style="display:none" id="intro9"> Give it whatever name satisfies you.</p>
+    <p style="display:none" id="intro10"> Regardless of the name, each element is like a beast of its own kind.</p>
+    <p style="display:none" id="intro11"> Each element requires a mastery of its own.</p>
+    <p style="display:none" id="intro12"> This magical assessment will read into your soul... and determine which element best suits you.</p>
+    <p style="display:none" id="intro13"> Are you prepared for this assessment?</p>
+    <p style="display:none" id="introPrompt"><button onclick="continue2()" id="continue2" class="lime">Yes</button><button onclick="resetGame()" id="exit2" class="vanilla">No</button></p>
+    <p style="display:none" id="quitbutton"><button onclick="resetGame()">Exit Game</button></p>
 
+</div>
+<div style="display:none"class="smallBox" id="firstQuestion">
+    <p>Among the following choices, identify the most important quality a leader should possess.</p>
+    <button onclick="firstQuestionResponse(1);">Power</button> <button onclick="firstQuestionResponse(2)">Intelligence</button>
+    <button onclick="firstQuestionResponse(3)">Empathy</button> <button onclick="firstQuestionResponse(4)">Integrity</button>
+</div>
+    
+<div style="display:none"class="smallBox"id="secondQuestion">
+    <p>Among the following choices, identify the most prominent quality in yourself.</p>
+    <button onclick="secondQuestionResponse(1)">Loyal</button> <button onclick="secondQuestionResponse(2)">Exciting</button>
+    <button onclick="secondQuestionResponse(3)">Mysterious</button> <button onclick="secondQuestionResponse(4)">Strong</button>
 
+</div>
+<div style="display:none"class="smallBox"id="thirdQuestion">
+    <p>Among the following choices, identify the most important quality to find in an ideal friend.</p>
+    <button onclick="thirdQuestionResponse(1)">Kind</button> <button onclick="thirdQuestionResponse(2)">Loyal</button>
+    <button onclick="thirdQuestionResponse(3)">Fun</button> <button onclick="thirdQuestionResponse(4)">Intelligent</button>
+</div>
+
+<div id="tieChecker" style="display:none" class="smallBox">
+    A tiny crystal ball before you begins to swirl with colors of light.
+    <button style="display:none" onclick="calcWinners();" class="chocolate" id="calcDebug">Peer into the glass...</button>
+</div>
+    <div id="transitionToDoorRoom" style="display:none" class="doorRoomBox">
+        The ball bursts with a flash of blinding light, and suddenly you find yourself in the center of a strange room.
+        You see some doors in front of you. You must choose a door to enter.
+        <br />
+        <button id="showDoors" onclick="showTheDoors()">Proceed</button>
     </div>
 
 
+<div id="doorRoom" style="display:none" class="">
+    <div id="sunDoor" style="display:none">
+        <img src="images/sundoor.png" alt="sundoor" width="260" height="428"/>
+        <br />
+    <button onclick="getWinner(1);" >It's laced with gold, and has sunlight coming out.</button>
+    </div>  
+    <br />
+    <div id="moonDoor" style="display:none">
+        <img src="images/moondoor.png" alt="moondoor"  width="260" height="428"/>
+        <br />
+    <button onclick="getWinner(2)">It's painted black and has sparkles in the center.</button>
+    </div><br />
+    <div id="skyDoor" style="display:none">
+        <img src="images/skydoor.png" alt="skydoor"  width="260" height="428"/>
+        <br />
+    <button onclick="getWinner(3)">This isn't a door, it's an archway. Cool air is flowing in.</button>
+    </div>   <br />    
+    <div id="waterDoor" style="display:none" >
+    <img src="images/waterdoor.png" alt="waterdoor" width="260" height="428"/>
+    <br />
+    <button onclick="getWinner(4)">It's made entirely of glass. It sparkles in the light.</button></div>
+    <div id="stoneDoor" style="display:none">
+        <img src="images/stonedoor.png" alt="stonedoor"  width="260" height="428"/>
+        <br />
+    <button onclick="getWinner(5)">It's made entirely of hardy steel. It's very strong.</button>
+    </div> <br />   
+    <div id="fireDoor" style="display:none">
+        <img src="images/firedoor.png" alt="firedoor"  width="260" height="428"/>
+        <br />
+    <button onclick="getWinner(6)">The closer you get to this door, the hotter the air gets.</button>
+    </div>   <br />
+    <div id="iceDoor" style="display:none">
+        <img src="images/icedoor.png" alt="icedoor"  width="260" height="428"/>
+        <br />
+    <button onclick="getWinner(7)">This door is made entirely of crystal glass.</button>
+    </div><br />
+    <div id="lifeDoor" style="display:none">
+        <img src="images/lifedoor.png" alt="lifedoor" width="260" height="428"/>
+        <br />
+    <button onclick="getWinner(8)">This mossy door smells faintly of bamboo and roses.</button>
+    </div><br />
+    <div id="mindDoor" style="display:none">
+        <img src="images/minddoor.png" alt="minddoor"  width="260" height="428"/>
+        <br />
+    <button onclick="getWinner(9)">It's just a mirror. You can see your shadow in it, but not your face...</button>
+    </div>    <br />
+    <div id="lightningDoor" style="display:none">
+        <img src="images/lightningdoor.png" alt="lightningdoor" width="260" height="428"/>
+        <br />
+    <button onclick="getWinner(10)">This door has glowing neon lights on it.</button>
+    </div><br />
+    <div id="lightDoor" style="display:none"> 
+    <img src="images/lightdoor.png" alt="lightdoor" width="260" height="428"/>
+    <br />
+    <button onclick="getWinner(11)">It's just wooden, nothing special.</button>
+    </div>  <br />  
+    <div id="darkDoor" style="display:none">
+        <img src="images/darkdoor.png" alt="darkdoor"  width="260" height="428"/>
+        <br />
+        <button onclick="getWinner(12)">There is a deep, empty darkness seen in the window.</button>
+    </div>
+</div>
+   
+<br />
+<div class="smallBox" style="display:none" id="resultBox">If you lived in my universe, your powers would be: <p id="resultDisplay"></p>
+    <p id="powerDescription"></p>
+    
+    </div>
 
 
-
+<footer><script src="elementquiz.js"></script></footer>
 </body>
+
 </html>

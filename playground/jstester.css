@@ -41,7 +41,11 @@ html {
       color: #ddcdb6;
       border: 3px solid lightgoldenrodyellow;
   }
-
+  #strawberry
+  {
+    background-color:crimson;
+    color: lightpink;
+  }
   button:hover{
       color: white;
       font-style: italic;
@@ -52,4 +56,20 @@ html {
   button:hover#vanilla 
   {
     border: 3px solid black;
+  }
+  button:hover#strawberry
+  {
+    border: 3px solid hotpink
+  }
+  button:active
+  {
+    border: 3px solid white;
+  }
+  button:focus
+  {
+    border: 3px solid white;
+  }
+  button:visited
+  {
+    border: 3px solid white;
   }

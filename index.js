@@ -54,23 +54,7 @@ function showArtStatement() {
     }
 }
 
-function showAbout() {
-    if (aboutPageIsShowing === false) {
-        aboutPage.style.display = "inline-block";
-        aboutPageIsShowing = true;
-        bioIsShowing = false;
-        artStatementIsShowing = false;
-        biography.style.display = "none"
-        artistStatement.style.display = "none"
-    }
-    else {
-        aboutPage.style.display = "none"
-        aboutPageIsShowing = false;
-        biography.style.display = "none"
-        artistStatement.style.display = "none"
-    }
 
-}
 
 function showVideos() {
     if (videosSectionIsShowing === false) {
