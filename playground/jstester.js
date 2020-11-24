@@ -34,11 +34,14 @@ function addStraw(number) {
 function totalFlavor()
 {
     var x = numVanilla + numLime + numChocolate + numStrawberry;
+
     var percentVanilla = Math.ceil((numVanilla / x) * 100);
     var percentChocolate = Math.ceil((numChocolate / x) * 100);
     var percentLime = Math.ceil((numLime / x) * 100);
     var percentStrawberry = Math.ceil((numStrawberry / x)*100);
-    
+    if (x != 0)
+    {
+    console.log(x)
     document.getElementById("chocpercent").innerText = percentChocolate;
     document.getElementById("limepercent").innerText = percentLime;
     document.getElementById("vanipercent").innerText = percentVanilla;
@@ -48,6 +51,7 @@ function totalFlavor()
     console.log("Chocolate: "+numChocolate)
     console.log("Lime: "+numLime)
     console.log("Strawberry: "+numStrawberry)
+    }
     var flavors = [numVanilla,numLime,numChocolate,numStrawberry];
     var biggest = []
     flavors.sort(function(b, a){return a-b});
